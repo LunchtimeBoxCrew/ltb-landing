@@ -1,9 +1,11 @@
+<script lang="ts">
+	import Person from '$lib/Person.svelte';
+</script>
+
 <header>
-	<ul>
-		<li>
-			<a href="Stuff"> Makes</a>
-		</li>
-	</ul>
+	<a href="#roadmap">Roadmap</a>
+	<a href="#team">Team</a>
+	<a href="#contact">Kontakt</a>
 </header>
 <main>
 	<!-- Intro Section -->
@@ -12,10 +14,14 @@
 			<b>Soziale Teilhabe</b><br />
 			mit einem Klick.
 		</h1>
+
+		<p>Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.</p>
+
+		<button>Kontaktiere uns</button>
 	</section>
 
 	<!-- Explainer Section -->
-	<section id="explainer">
+	<section id="explainer" class="dark">
 		<h3>LunchtimeBox</h3>
 
 		<p>
@@ -40,10 +46,20 @@
 	</section>
 
 	<section id="team">
-		<Person name="Majid" description="" img="asdasd" />
+		<Person name="Majid" description="packt an, zieht durch" img="asdasd" />
+		<Person name="Timo" description="der perfektionistische Informatiker" img="asdasd" />
+		<Person name="Lara" description="unsere kreative Powereinheit" img="asdasd" />
+		<Person name="Dario" description="unsere Emotionale Intelligenz" img="asdasd" />
+		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="asdasd" />
+		<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="asdasd" />
+		<Person name="Majid" description="unser kreativer Programmierer" img="asdasd" />
 	</section>
 </main>
 
 <style lang="scss">
 	@import '../styles/index.scss';
+
+	section.dark {
+		background-color: $light-gray;
+	}
 </style>
