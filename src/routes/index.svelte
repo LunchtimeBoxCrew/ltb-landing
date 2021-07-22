@@ -59,6 +59,32 @@
 <style lang="scss">
 	@import '../styles/index.scss';
 
+	header {
+		float: right;
+		> a {
+			text-decoration: none;
+			font-weight: 200;
+			color: white;
+		}
+	}
+
+	#intro {
+		background-image: url('./HeroHeader.jpg');
+		background-size: cover;
+
+		> h1 {
+			font-size: 96px;
+			font-weight: 300;
+			line-height: 99px;
+			margin: 0px;
+			padding: 20px 0px;
+		}
+		> h1,
+		p {
+			color: white;
+		}
+	}
+
 	section.dark {
 		background-color: $light-gray;
 	}
