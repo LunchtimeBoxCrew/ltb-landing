@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="/favicon.png" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
 
 		
 
-		<link rel="modulepreload" href="/./_app/start-744b0ebb.js">
+		<link rel="modulepreload" href="/./_app/start-01185735.js">
 		<link rel="modulepreload" href="/./_app/chunks/vendor-a78000b0.js">
 		<link rel="modulepreload" href="/./_app/layout.svelte-a53b13af.js">
-		<link rel="modulepreload" href="/./_app/pages/index.svelte-17d48825.js">
+		<link rel="modulepreload" href="/./_app/pages/index.svelte-eeb31ac4.js">
 		<link rel="stylesheet" href="/./_app/assets/start-a8cd1609.css">
+		<link rel="stylesheet" href="/./_app/assets/pages/index.svelte-b4ebb2dd.css">
 
 		<script type="module">
-			import { start } from "/./_app/start-744b0ebb.js";
+			import { start } from "/./_app/start-01185735.js";
 			start({
 				target: document.querySelector("#svelte"),
 				paths: {"base":"","assets":"/."},
@@ -29,7 +36,7 @@
 					error: null,
 					nodes: [
 						import("/./_app/layout.svelte-a53b13af.js"),
-						import("/./_app/pages/index.svelte-17d48825.js")
+						import("/./_app/pages/index.svelte-eeb31ac4.js")
 					],
 					page: {
 						host: location.host, // TODO this is redundant
@@ -40,19 +47,27 @@
 				}
 			});
 		</script>
-	</head>
-	<body>
-		<div id="svelte">
+
+</head>
+
+<body>
+	<div id="svelte">
 
 
-<header><ul><li><a href="#intro">Makes</a></li></ul></header>
+<header><a href="#roadmap">Roadmap</a>
+	<a href="#team">Team</a>
+	<a href="#contact">Kontakt</a></header>
 <main>
-	<section id="intro"><h1><b>Soziale Teilhabe</b><br>
+	<section id="intro"><h1 class="svelte-nac81p"><b>Soziale Teilhabe</b><br>
 	mit einem Klick.
-</h1></section>
+</h1>
+
+<p>Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.</p>
+
+<button>Kontaktiere uns</button></section>
 
 	
-	<section id="explainer"><h3>LunchtimeBox</h3>
+	<section id="explainer" class="dark svelte-nac81p"><h3>LunchtimeBox</h3>
 
 <p>Die Lunchtimebox ermöglicht Teilnahme am sozialen Leben mit nur einem Klick Lorem ipsum dolor
 	sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
@@ -69,7 +84,25 @@
 </p></section>
 
 	<section id="team"><div><p>Majid</p>
-    <p></p>
+    <p>packt an, zieht durch</p>
+    <p>asdasd</p></div>
+<div><p>Timo</p>
+    <p>der perfektionistische Informatiker</p>
+    <p>asdasd</p></div>
+<div><p>Lara</p>
+    <p>unsere kreative Powereinheit</p>
+    <p>asdasd</p></div>
+<div><p>Dario</p>
+    <p>unsere Emotionale Intelligenz</p>
+    <p>asdasd</p></div>
+<div><p>Jonas</p>
+    <p>der immer noch zwei Schritte weiterdenkt</p>
+    <p>asdasd</p></div>
+<div><p>Fabian</p>
+    <p>&quot;MacMakeThings&quot;</p>
+    <p>asdasd</p></div>
+<div><p>Majid</p>
+    <p>unser kreativer Programmierer</p>
     <p>asdasd</p></div></section>
 </main>
 
@@ -77,5 +110,6 @@
 
 	
 </div>
-	</body>
+</body>
+
 </html>
