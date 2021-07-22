@@ -10,6 +10,7 @@ specifiers:
   eslint-plugin-svelte3: ^3.2.0
   prettier: ~2.2.1
   prettier-plugin-svelte: ^2.2.0
+  sass: ^1.35.2
   svelte: ^3.34.0
   svelte-check: ^2.0.0
   svelte-preprocess: ^4.0.0
@@ -28,9 +29,10 @@ devDependencies:
   eslint-plugin-svelte3: 3.2.0_eslint@7.31.0+svelte@3.40.0
   prettier: 2.2.1
   prettier-plugin-svelte: 2.3.1_prettier@2.2.1+svelte@3.40.0
+  sass: 1.35.2
   svelte: 3.40.0
-  svelte-check: 2.2.3_svelte@3.40.0
-  svelte-preprocess: 4.7.4_svelte@3.40.0+typescript@4.3.5
+  svelte-check: 2.2.3_sass@1.35.2+svelte@3.40.0
+  svelte-preprocess: 4.7.4_2d4837ff0f64a72133290665bdde2963
   tslib: 2.3.0
   typescript: 4.3.5
 
@@ -1155,6 +1157,14 @@ packages:
       mri: 1.1.6
     dev: true
 
+  /sass/1.35.2:
+    resolution: {integrity: sha512-jhO5KAR+AMxCEwIH3v+4zbB2WB0z67V1X0jbapfVwQQdjHZUGUyukpnoM6+iCMfsIUC016w9OPKQ5jrNOS9uXw==}
+    engines: {node: '>=8.9.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.2
+    dev: true
+
   /semver/7.3.5:
     resolution: {integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==}
     engines: {node: '>=10'}
@@ -1249,7 +1259,7 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-check/2.2.3_svelte@3.40.0:
+  /svelte-check/2.2.3_sass@1.35.2+svelte@3.40.0:
     resolution: {integrity: sha512-mqe/lgF0Ew+54YI4bPW5D26sMolh+MofQiz41U0c1GvUsP3bKsLLH0mjs4P4Xc+ajUFJtvGBo5PWaf0dd46sIQ==}
     hasBin: true
     peerDependencies:
@@ -1263,7 +1273,7 @@ packages:
       sade: 1.7.4
       source-map: 0.7.3
       svelte: 3.40.0
-      svelte-preprocess: 4.7.4_svelte@3.40.0+typescript@4.3.5
+      svelte-preprocess: 4.7.4_2d4837ff0f64a72133290665bdde2963
       typescript: 4.3.5
     transitivePeerDependencies:
       - '@babel/core'
@@ -1286,7 +1296,7 @@ packages:
       svelte: 3.40.0
     dev: true
 
-  /svelte-preprocess/4.7.4_svelte@3.40.0+typescript@4.3.5:
+  /svelte-preprocess/4.7.4_2d4837ff0f64a72133290665bdde2963:
     resolution: {integrity: sha512-mDAmaltQl6e5zU2VEtoWEf7eLTfuOTGr9zt+BpA3AGHo8MIhKiNSPE9OLTCTOMgj0vj/uL9QBbaNmpG4G1CgIA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -1330,6 +1340,7 @@ packages:
       '@types/pug': 2.0.5
       '@types/sass': 1.16.1
       detect-indent: 6.1.0
+      sass: 1.35.2
       strip-indent: 3.0.0
       svelte: 3.40.0
       typescript: 4.3.5
