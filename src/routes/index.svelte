@@ -56,6 +56,7 @@
 			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="images/naski.jpeg" />
 			<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="images/fabian.jpeg" />
 			<Person name="Max" description="unser kreativer Programmierer" img="images/max.jpeg" />
+			<Person name="Dummy" description="Im a dummy to test certain ui elemens" img='images/naski.jpeg' />
 		</div>
 	</section>
 </main>
