@@ -10,7 +10,7 @@
 <div id='wrapper'>
     
     <p>
-        {img}
+        <img src={img} />
     </p>
     <h2 class=''>
         {name}
