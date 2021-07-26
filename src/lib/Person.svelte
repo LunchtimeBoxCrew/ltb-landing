@@ -27,5 +27,12 @@
     #wrapper {
         margin: 2rem;
     }
+    img {
+        height: 12rem;
+        width: 12rem;
+        overflow-y: hidden;
+        object-fit: cover;
+        object-position: 20% 20%;
+    }
 
 </style>
