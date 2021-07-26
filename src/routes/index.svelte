@@ -10,12 +10,14 @@
 <main>
 	<!-- Intro Section -->
 	<section id="intro">
-		<h1>
-			<b>Soziale Teilhabe</b><br />
-			mit einem Klick.
-		</h1>
+		<div id ='heading' class='white'>
+			<h1>
+				<b>Soziale Teilhabe</b><br />
+				mit einem Klick.
+			</h1>
+		</div>
 
-		<p>Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.</p>
+		<p class='white'>Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.</p>
 
 		<button>Kontaktiere uns</button>
 	</section>
@@ -39,7 +41,7 @@
 
 	<section id="about-us">
 		<p>
-			sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
+			Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
 			Design, Entrepeneurship und dem gemeinsamen Wunsch diese Fähigkeiten in einem sozialen Kontext
 			einzusetzen.
 		</p>
@@ -72,17 +74,17 @@
 		background-image: url('./HeroHeader.jpg');
 		background-size: cover;
 
-		> h1 {
+		 h1 {
 			font-size: 96px;
 			font-weight: 300;
 			line-height: 99px;
 			margin: 0px;
 			padding: 20px 0px;
 		}
-		> h1,
-		p {
-			color: white;
+		#heading {
+			padding-top: 48rem;
 		}
+		 
 	}
 	
 	#team {
