@@ -44,10 +44,14 @@
 
 	<section id="roadmap">
 		<h2>Stuff and things</h2>
-		<RoadMapEntry position="left" heading="A test entry" text="This is description text" />
+		<RoadMapEntry position="left" name="A test entry" description="This is description text" />
+		<RoadMapEntry position="right" name="A test entry" description="This is description text" />
+		<RoadMapEntry position="left" name="A test entry" description="This is description text" />
+		<RoadMapEntry position="right" name="A test entry" description="This is description text" />
 	</section>
 
 	<section id="about-us">
+		<h2>About us</h2>
 		<p>
 			Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
 			Design, Entrepeneurship und dem gemeinsamen Wunsch diese Fähigkeiten in einem sozialen Kontext
