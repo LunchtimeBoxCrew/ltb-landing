@@ -47,10 +47,10 @@
 
 	<section id="team">
 		<div class='personwrapper'>
-			<Person name="Majid" description="packt an, zieht durch" img="asdasd" />
+			<Person name="Majid" description="packt an, zieht durch" img="asdf" />
 			<Person name="Timo" description="der perfektionistische Informatiker" img="asdasd" />
-			<Person name="Lara" description="unsere kreative Powereinheit" img="asdasd" />
-			<Person name="Dario" description="unsere Emotionale Intelligenz" img="asdasd" />
+			<Person name="Lara" description="unsere kreative Powereinheit" img="images/lara.jpeg" />
+			<Person name="Dario" description="unsere Emotionale Intelligenz" img="images/dario.jpeg" />
 		</div>
 		<div class='personwrapper'>
 			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="asdasd" />
@@ -99,7 +99,6 @@
 			justify-content: center;
 		}
 
-		
 	}
 
 	section.dark {
