@@ -16,10 +16,17 @@
 				mit einem Klick<b>.</b>
 			</h1>
 		</div>
-
-		<p class='white'>Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.</p>
-
-		<button>Kontaktiere uns</button>
+		<div id="footer">
+			<div id='subtextwrapper'>
+				<p class='white'>Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.</p>
+			</div>
+			<button id="contact">
+				<div id="content">
+					<p> Kontaktiere uns </p>
+					<img src='images/email.svg' />
+				</div>
+			</button>
+		</div>
 	</section>
 
 	<!-- Explainer Section -->
@@ -85,6 +92,33 @@
 			padding: 3rem;
 			padding-top: 48rem;
 		}
+		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
+		#footer {
+			display: flex;
+			flex-direction: row;
+			width: 90%;
+			justify-content: space-between;
+			height: 3rem;
+			padding: 2rem;
+		}
+		#subtextwrapper {
+			font-size: 1.4rem;
+			width: 48rem;
+		}
+		#contact {
+			all: unset;
+			background-color: white;
+			width: 16rem;
+			border: none;
+			border-radius: 0.5rem;
+			#content {
+				color: gray;
+				padding: 1rem;
+				display: flex;
+				flex-direction: row;
+			}
+		}
+		
 		 
 	}
 	
@@ -101,5 +135,9 @@
 	}
 	.white {
 		color: white;
+	}
+	p {
+		padding: 0;
+		margin: 0;
 	}
 </style>
