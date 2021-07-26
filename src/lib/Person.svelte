@@ -9,15 +9,15 @@
 
 <div id='wrapper'>
     
-    <p>
-        <img src={img} />
-    </p>
-    <h2 class=''>
-        {name}
-    </h2>
-    <p>
-        {description}
-    </p>
+    <img src={img} />
+    <div id='infobox' class='ltbgreen'>
+        <h2 class=''>
+            {name}
+        </h2>
+        <p>
+            {description}
+        </p>
+    </div>
 
 
 
@@ -25,14 +25,25 @@
 
 <style>
     #wrapper {
+        height: 12rem;
+        width: 36rem;
         margin: 2rem;
+        display: flex;
+        flex-direction: row;
+    }
+    #infobox {
+        width: 66%;
     }
     img {
-        height: 12rem;
-        width: 12rem;
+        height: 100%;
+        width: 33%;
         overflow-y: hidden;
         object-fit: cover;
         object-position: 20% 20%;
+    }
+
+    div.ltbgreen {
+        background: #00877C;
     }
 
 </style>
