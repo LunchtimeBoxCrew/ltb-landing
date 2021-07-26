@@ -46,18 +46,14 @@
 	</section>
 
 	<section id="team">
-		<div class='personwrapper'>
-			<Person name="Majid" description="packt an, zieht durch" img="images/majid.jpeg" />
-			<Person name="Timo" description="der perfektionistische Informatiker" img="images/timo.jpeg" />
-			<Person name="Lara" description="unsere kreative Powereinheit" img="images/lara.jpeg" />
-			<Person name="Dario" description="unsere Emotionale Intelligenz" img="images/dario.jpeg" />
-		</div>
-		<div class='personwrapper'>
-			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="images/naski.jpeg" />
-			<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="images/fabian.jpeg" />
-			<Person name="Max" description="unser kreativer Programmierer" img="images/max.jpeg" />
-			<Person name="Dummy" description="Im a dummy to test certain ui elemens" img='images/naski.jpeg' />
-		</div>
+		<Person name="Majid" description="packt an, zieht durch" img="images/majid.jpeg" />
+		<Person name="Timo" description="der perfektionistische Informatiker" img="images/timo.jpeg" />
+		<Person name="Lara" description="unsere kreative Powereinheit" img="images/lara.jpeg" />
+		<Person name="Dario" description="unsere Emotionale Intelligenz" img="images/dario.jpeg" />
+		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="images/naski.jpeg" />
+		<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="images/fabian.jpeg" />
+		<Person name="Max" description="unser kreativer Programmierer" img="images/max.jpeg" />
+		<Person name="Dummy" description="Im a dummy to test certain ui elemens" img='images/naski.jpeg' />
 	</section>
 </main>
 
@@ -92,13 +88,12 @@
 	
 	#team {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 100%;
 		
-		.personwrapper {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-		}
+	
 
 	}
 
