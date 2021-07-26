@@ -31,15 +31,16 @@
 
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
-		<h3>LunchtimeBox</h3>
-
-		<p>
-			Die Lunchtimebox ermöglicht Teilnahme am sozialen Leben mit nur einem Klick Lorem ipsum dolor
-			sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-			Lorem ipsum dolor sit amet Lorem ipsm dfgodfngdfg sdf gsdfg sdf gsdf gsd fgsdfgsfvcb sdfbs
-			dfvsdfv sdfs dfbsdfbsdf bsdfb sfgb sfgb sfgb sfgbs fbsf gbsfgb sfgb sdfgb sdfb sdfgb sdfb sdfb
-			sdfb sdfb sdb sd bsdf bsd fb sdfb sdfb sfdgb sdfg bsdf bsd
-		</p>
+		<div id='content'>
+			<h2>LunchtimeBox</h2>
+			<p id='text'>
+				Die Lunchtimebox ermöglicht Teilnahme am sozialen Leben mit nur einem Klick Lorem ipsum dolor
+				sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
+				Lorem ipsum dolor sit amet Lorem ipsm dfgodfngdfg sdf gsdfg sdf gsdf gsd fgsdfgsfvcb sdfbs
+				dfvsdfv sdfs dfbsdfbsdf bsdfb sfgb sfgb sfgb sfgbs fbsf gbsfgb sfgb sdfgb sdfb sdfgb sdfb sdfb
+				sdfb sdfb sdb sd bsdf bsd fb sdfb sdfb sfdgb sdfg bsdf bsd
+			</p>
+		</div>
 	</section>
 
 	<section id="roadmap">
@@ -70,10 +71,17 @@
 
 	header {
 		float: right;
+		padding: 2rem;
 		> a {
+			
 			text-decoration: none;
 			font-weight: 200;
 			color: white;
+			padding: 1rem;
+		}
+		a:hover {
+			transition: all 1s;
+			text-decoration: underline;
 		}
 	}
 
@@ -89,17 +97,16 @@
 			
 		}
 		#heading {
-			padding: 3rem;
+			padding: 5rem;
 			padding-top: 48rem;
 		}
 		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
 		#footer {
 			display: flex;
 			flex-direction: row;
-			width: 90%;
 			justify-content: space-between;
 			height: 3rem;
-			padding: 2rem;
+			padding: 5rem;
 		}
 		#subtextwrapper {
 			font-size: 1.4rem;
@@ -113,13 +120,20 @@
 			border-radius: 0.5rem;
 			#content {
 				color: gray;
-				padding: 1rem;
+				font-size: 1rem;
 				display: flex;
 				flex-direction: row;
+				justify-content: space-around;
+			}
+			svg {
+				fill: gray;
 			}
 		}
 		
 		 
+	}
+	#explainer {
+		padding: 3rem;
 	}
 	
 	#team {
