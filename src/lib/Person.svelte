@@ -7,18 +7,25 @@
 </script>
 
 
-<div>
-
-    <p>
-        {name}
-    </p>
-    <p>
-        {description}
-    </p>
+<div id='wrapper'>
+    
     <p>
         {img}
+    </p>
+    <h2 class=''>
+        {name}
+    </h2>
+    <p>
+        {description}
     </p>
 
 
 
 </div>
+
+<style>
+    #wrapper {
+        margin: 2rem;
+    }
+
+</style>
