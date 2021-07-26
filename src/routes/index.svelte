@@ -46,13 +46,17 @@
 	</section>
 
 	<section id="team">
-		<Person name="Majid" description="packt an, zieht durch" img="asdasd" />
-		<Person name="Timo" description="der perfektionistische Informatiker" img="asdasd" />
-		<Person name="Lara" description="unsere kreative Powereinheit" img="asdasd" />
-		<Person name="Dario" description="unsere Emotionale Intelligenz" img="asdasd" />
-		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="asdasd" />
-		<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="asdasd" />
-		<Person name="Majid" description="unser kreativer Programmierer" img="asdasd" />
+		<div class='personwrapper'>
+			<Person name="Majid" description="packt an, zieht durch" img="asdasd" />
+			<Person name="Timo" description="der perfektionistische Informatiker" img="asdasd" />
+			<Person name="Lara" description="unsere kreative Powereinheit" img="asdasd" />
+			<Person name="Dario" description="unsere Emotionale Intelligenz" img="asdasd" />
+		</div>
+		<div class='personwrapper'>
+			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="asdasd" />
+			<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="asdasd" />
+			<Person name="Majid" description="unser kreativer Programmierer" img="asdasd" />
+		</div>
 	</section>
 </main>
 
@@ -83,6 +87,19 @@
 		p {
 			color: white;
 		}
+	}
+	
+	#team {
+		display: flex;
+		flex-direction: column;
+		
+		.personwrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		
 	}
 
 	section.dark {
