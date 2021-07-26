@@ -13,7 +13,7 @@
 		<div id ='heading' class='white'>
 			<h1>
 				<b>Soziale Teilhabe</b><br />
-				mit einem Klick.
+				mit einem Klick<b>.</b>
 			</h1>
 		</div>
 
