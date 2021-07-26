@@ -92,9 +92,6 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		width: 100%;
-		
-	
-
 	}
 
 	section.dark {
