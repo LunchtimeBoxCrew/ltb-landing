@@ -46,14 +46,13 @@
 	</section>
 
 	<section id="team">
-		<Person name="Majid" description="packt an, zieht durch" img="images/majid.jpeg" />
-		<Person name="Timo" description="der perfektionistische Informatiker" img="images/timo.jpeg" />
-		<Person name="Lara" description="unsere kreative Powereinheit" img="images/lara.jpeg" />
-		<Person name="Dario" description="unsere Emotionale Intelligenz" img="images/dario.jpeg" />
-		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" img="images/naski.jpeg" />
-		<Person name="Fabian" description="&quot;MacMakeThings&quot;" img="images/fabian.jpeg" />
-		<Person name="Max" description="unser kreativer Programmierer" img="images/max.jpeg" />
-		<Person name="Dummy" description="Im a dummy to test certain ui elemens" img='images/naski.jpeg' />
+		<Person name="Majid," description="packt an, zieht durch" img="images/majid.jpeg" />
+		<Person name="Timo," description="der perfektionistische Informatiker" img="images/timo.jpeg" />
+		<Person name="Lara," description="unsere kreative Powereinheit" img="images/lara.jpeg" />
+		<Person name="Dario," description="unsere Emotionale Intelligenz" img="images/dario.jpeg" />
+		<Person name="Jonas," description="der immer noch zwei Schritte weiterdenkt" img="images/naski.jpeg" />
+		<Person name="Fabian," description="&quot;MacMakeThings&quot;" img="images/fabian.jpeg" />
+		<Person name="Max," description="unser kreativer Programmierer" img="images/max.jpeg" />
 	</section>
 </main>
 
@@ -96,5 +95,8 @@
 
 	section.dark {
 		background-color: $light-gray;
+	}
+	.white {
+		color: white;
 	}
 </style>
