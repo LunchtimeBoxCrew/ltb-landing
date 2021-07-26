@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Person from '$lib/Person.svelte';
+	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 </script>
 
 <header>
@@ -43,6 +44,7 @@
 
 	<section id="roadmap">
 		<h2>Stuff and things</h2>
+		<RoadMapEntry position="left" heading="A test entry" text="This is description text" />
 	</section>
 
 	<section id="about-us">
@@ -96,7 +98,7 @@
 		}
 		#heading {
 			padding: 5rem;
-			padding-top: 48rem;
+			padding-top: 32rem;
 		}
 		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
 		#footer {
@@ -132,7 +134,16 @@
 	}
 	#explainer {
 		padding: 3rem;
-
+		font-weight: 300;
+		h2 {
+			font-weight: 400;
+			color: gray;
+			padding-bottom: 3rem;
+		}
+		#text {
+			width: 60%;
+			color: darkgray;
+		}
 
 	}
 	
@@ -153,5 +164,6 @@
 	p {
 		padding: 0;
 		margin: 0;
+		font-weight: 300;
 	}
 </style>
