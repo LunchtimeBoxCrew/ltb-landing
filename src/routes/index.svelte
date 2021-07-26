@@ -75,13 +75,14 @@
 		background-size: cover;
 
 		 h1 {
-			font-size: 96px;
+			font-size: 8rem;
 			font-weight: 300;
-			line-height: 99px;
-			margin: 0px;
-			padding: 20px 0px;
+			line-height: 8rem;
+			margin: 0;
+			
 		}
 		#heading {
+			padding: 3rem;
 			padding-top: 48rem;
 		}
 		 
