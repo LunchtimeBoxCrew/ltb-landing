@@ -43,11 +43,9 @@
 	</section>
 
 	<section id="roadmap">
-		<h2>Stuff and things</h2>
-		<RoadMapEntry position="left" name="A test entry" description="This is description text" />
-		<RoadMapEntry position="right" name="A test entry" description="This is description text" />
-		<RoadMapEntry position="left" name="A test entry" description="This is description text" />
-		<RoadMapEntry position="right" name="A test entry" description="This is description text" />
+		<h2>Roadmap - Where we've been, where we're going</h2>
+		<RoadMapEntry name='Entstehung' date='2019' description='Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage "Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen' />
+		
 	</section>
 
 	<section id="about-us">
@@ -72,6 +70,12 @@
 
 <style lang="scss">
 	@import '../styles/index.scss';
+
+	p {
+		padding: 0;
+		margin: 0;
+		font-weight: 300;
+	}
 
 	header {
 		float: right;
@@ -102,7 +106,7 @@
 		}
 		#heading {
 			padding: 5rem;
-			padding-top: 32rem;
+			padding-top: 18rem;
 		}
 		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
 		#footer {
@@ -137,7 +141,7 @@
 		 
 	}
 	#explainer {
-		padding: 3rem;
+		padding: 5rem;
 		font-weight: 300;
 		h2 {
 			font-weight: 400;
@@ -149,6 +153,13 @@
 			color: darkgray;
 		}
 
+	}
+
+	#roadmap {
+		margin: 5rem;
+		h2 {
+			font-weight: 700;
+		}
 	}
 	
 	#team {
@@ -165,9 +176,8 @@
 	.white {
 		color: white;
 	}
-	p {
-		padding: 0;
-		margin: 0;
-		font-weight: 300;
+	#about-us {
+		margin: 5rem;
 	}
+	
 </style>
