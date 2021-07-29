@@ -45,8 +45,8 @@
 	<section id="roadmap">
 		<h2>Roadmap - Where we've been, where we're going</h2>
 		<RoadMapEntry name='Entstehung' date='2019' image='images/ideation.jpg' description='Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage "Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen' />
-		<RoadMapEntry name='Dummy' date='2019' image='images/ideation.jpg' description='Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage "Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen' />
-		<RoadMapEntry name='Dummy' date='2019' image='images/ideation.jpg' description='Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage "Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen' />
+		<RoadMapEntry name='Project Make 1' date='2020' image='images/project.jpg' description='Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen' />
+		<RoadMapEntry name='Kickstart' date='2021' image='images/acceleration.jpg' description='Im Verlauf des Project Make 1 konnten wir das Team des Kickstart@TH Köln mit unserer Idee überzeugen und eine Förderung von 7.500€ für die Weiterentwicklung unseres Prototypen erhalten.' />
 		
 	</section>
 
