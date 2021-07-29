@@ -22,7 +22,7 @@
     </div>
         {#if showDesc}
     <div transition:slide>
-        <p style='margin: 1rem'>{description}</p>
+        <p id='desc'>{description}</p>
     </div>
     {/if}
 </div>
@@ -38,7 +38,7 @@
     #wrapper {
         position: relative;
         overflow: hidden;
-        height: 6rem;
+        height: 8rem;
         border-radius: 1rem;
     }
     img {
@@ -62,6 +62,9 @@
         margin: 1rem;
         font-size: 2rem;
         color: white;
+    }
+    #desc {
+        margin: 1rem;
     }
     .gray {
         background-color: #f8f8f8;
