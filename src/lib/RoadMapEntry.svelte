@@ -12,28 +12,56 @@
     }
 
 </script>
-<div id='wrapper' class='gray' on:click={switchDesc} style='--bg-image = {image}'>
-    <h2>{name}</h2>
-    <p>{date}</p>
-    {#if showDesc}
+<div id='entry' on:click={switchDesc}>
+    <div id='wrapper'>
+        <img src={image} alt='descriptive image of {name}' />
+        <div id='header'>
+            <h1 id='heading'>{name}</h1>
+            <p id='date'>{date}</p>
+        </div>
+    </div>
+        {#if showDesc}
     <div transition:slide>
-        {description}
+        <p style='margin: 1rem'>{description}</p>
     </div>
     {/if}
 </div>
 
 <style>
-    #wrapper {
-        background-image: url(--bg-image);
-        width: 50%;
+    #entry {
         border-radius: 1rem;
-        padding: 1rem;
-        margin: 1rem;
-        transition: background-color .5s ease-in-out;
+        width: 50%;
+        background-color: #f8f8f8;
+        margin-bottom: 4rem;
     }
-    #wrapper:hover {
-            background-color: darkgray;
-        }
+    #wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 6rem;
+        border-radius: 1rem;
+    }
+    img {
+        width: 100%;
+    }
+    #header {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        top: 0;
+        left: 0;
+    }
+    #heading {
+        margin: 1rem;
+        font-weight: 900;
+        color: white;
+    }
+    #date {
+        margin: 1rem;
+        font-size: 2rem;
+        color: white;
+    }
     .gray {
         background-color: #f8f8f8;
     }
