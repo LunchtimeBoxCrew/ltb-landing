@@ -30,6 +30,7 @@
 <style>
     #entry {
         border-radius: 1rem;
+        cursor: pointer;
         width: 50%;
         background-color: #f8f8f8;
         margin-bottom: 4rem;
