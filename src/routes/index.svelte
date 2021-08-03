@@ -125,6 +125,7 @@
 	}
 
 	header {
+		z-index: 99;
 		float: right;
 		padding: 2rem;
 		> a {
