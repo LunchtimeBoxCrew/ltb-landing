@@ -125,8 +125,9 @@
 	}
 
 	header {
-		z-index: 99;
-		float: right;
+		z-index: 2;
+		right: 10px;
+		position: absolute;
 		padding: 2rem;
 		> a {
 			text-decoration: none;
