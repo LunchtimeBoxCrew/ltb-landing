@@ -13,29 +13,27 @@
 	<!-- Intro Section -->
 	<section id="intro">
 		<img srcset={HeroHeader} alt="smiling man sitting infront of desk with tablet" />
-		<div id="heading" class="white">
-			<h1>
-				<b>Soziale Teilhabe</b><br />
-				mit einem Klick<b>.</b>
-			</h1>
-		</div>
-		<div id="footer">
-			<div id="subtextwrapper">
-				<p class="white">
-					Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
-				</p>
+
+		<div class="capwidth">
+			<div id="heading" class="white">
+				<h1>
+					<b>Soziale Teilhabe</b><br />
+					mit einem Klick<b>.</b>
+				</h1>
 			</div>
-			<button id="contact">
-				<div id="content">
-					<p>Kontaktiere uns</p>
-					<img alt="email icon" src="images/email.svg" />
+			<div id="footer">
+				<div id="subtextwrapper">
+					<p class="white">
+						Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
+					</p>
 				</div>
-				<button>
+				<button id="contact">
 					<div id="content">
-						<p> Kontaktiere uns </p>
-						<img src='images/email.svg' alt='Email Icon'/>
+						<p>Kontaktiere uns</p>
+						<img alt="email icon" src="images/email.svg" />
 					</div>
-				</button>
+				</div>
+				
 			</div>
 	</section>
 
@@ -124,6 +122,10 @@
 
 	#intro {
 		position: relative;
+
+		> .capwidth{
+			padding: 5rem;
+		}
 		> img {
 			position: absolute;
 			z-index: -1;
@@ -137,35 +139,48 @@
 			font-weight: 300;
 			line-height: 8rem;
 			margin: 0;
+			@media (max-width: 1024px) {
+				font-size: 4rem;
+				line-height: 4rem;
+			}
 		}
 		#heading {
-			padding: 5rem;
+			
 			padding-top: 18rem;
 		}
 		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
 		#footer {
 			display: flex;
 			flex-direction: row;
+			align-items: center;
 			justify-content: space-between;
-			height: 3rem;
-			padding: 5rem;
+			padding: 8rem 4rem 4rem 0;
+			@media (max-width: 1024px) {
+				flex-direction: column;
+			}
 		}
 		#subtextwrapper {
 			font-size: 1.4rem;
-			width: 48rem;
 		}
 		button {
 			all: unset;
 			background-color: white;
-			width: 16rem;
 			border: none;
 			border-radius: 0.5rem;
+			padding: 1rem 1.2rem;
+			@media (max-width: 1024px) {
+				width: 100%;
+			}
 			#content {
 				color: gray;
 				font-size: 1rem;
 				display: flex;
 				flex-direction: row;
-				justify-content: space-around;
+				align-items: center;
+				justify-content: center;
+				p {
+					margin-right: 1rem;
+				}
 			}
 		}
 	}

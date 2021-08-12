@@ -39,7 +39,7 @@
 		object-fit: cover;
 
 		position: relative;
-		right: -80px;
+		right: -4rem;
 		mix-blend-mode: multiply;
 	}
 
@@ -48,12 +48,12 @@
 	}
 	#infobox {
 		width: 66%;
-		padding: 1rem;
+		padding: 1.3rem;
 	}
 	@media (min-width: 580px) {
 		#wrapper {
 			height: 16rem;
-			width: 32rem;
+			width: 28rem;
 			margin: 1rem;
 			border: 1rem 0 0 1rem;
 			object-position: 50% 50%;
@@ -71,9 +71,11 @@
     }
     .xl {
         font-size: 2rem;
+		  margin-bottom: 0.5rem;
     }
     .m {
-        font-size: 1rem;
+        font-size: 0.9rem;
+		  color: rgb(221, 221, 221);
     }
     .white {
         color: white;
