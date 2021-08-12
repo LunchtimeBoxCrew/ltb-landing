@@ -27,8 +27,7 @@ a {
 
     &.dark {
         background-color: rgb(24, 24, 24);
-        color:
-        .content {
+        .content >* {
             color: white;
         }
     }
