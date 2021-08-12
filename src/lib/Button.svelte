@@ -1,7 +1,9 @@
 <script lang="ts">
 	export let link: string | (() => string);
 	export let style: 'dark' | 'light' = 'light';
-    export let click: boolean = true;
+  export let click: boolean = true;
+
+  import Icon from "./Icon.svelte";
 
 	function setHref() {
 		this.href = typeof link === 'string' ? link : link();
@@ -9,6 +11,7 @@
 </script>
 
 <a on:click={setHref} href="#" class:dark={style === 'dark'} class:click>
+
 	<div class="content" >
 		<slot />
 	</div>
@@ -28,6 +31,7 @@ a {
     cursor: pointer;
     position: relative;
     max-width: 400px;
+    min-width: 200px;
     margin: var(--margin);
 
     &.dark {

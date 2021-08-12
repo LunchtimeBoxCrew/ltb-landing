@@ -3,8 +3,9 @@
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
 	import Button from '$lib/Button.svelte';
-	let phone = '+4900000000';
-	let mail = 'info@lunchtimebox.de';
+	import Icon from '$lib/Icon.svelte';
+	import {phone as phoneSrc} from '$lib/images/stock';
+	import {letter as letterSvg} from '$lib/images/icons';
 
 	function joinNumber() {
 		return 'tel:'+['+49', '2261', '0000000000'].join('');
@@ -104,20 +105,38 @@
 		</div>
 	</section>
 	<section id='contact'>
-		<h1>Kontaktiere uns</h1>
-		<div id='infos'>
-			<Button --margin="1rem" link={joinMail} style='dark'> 
-				<p>Schick uns eine Mail</p>
-			</Button>
-			<Button --margin="1rem" link={joinNumber} style='dark' click={false}> 
-				<p>Oder ruf uns einfach an</p>
-			</Button>
+		<h1 style="margin-bottom: 2rem">Kontaktiere uns</h1>
+		<div id='infowrapper'>
+			<div id='infos'>
+				<Button --margin="0.7rem 0" link={joinMail} style='dark'> 
+					<div class='button-content'>
+						<p>Schick uns eine Mail</p>
+						<Icon name="letter" --fill="white"></Icon>
+					</div>
+				</Button>
+				<Button --margin="0.7rem 0" link={joinNumber} style='dark' click={false}>
+					<div class='button-content'>
+						<p>Oder ruf uns einfach an</p>
+						<Icon name="letter" --fill="white"></Icon>
+					</div> 
+				</Button>
+	
+				<p id='text' style="text-align:center; margin-top: 2rem">
+					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre Unterstützung.
+					Egal, ob mit Testgeräten, Mentoring/Fachwissensaustausch oder Testpersonen - wir freuen uns über jede Art der Unterstützung. 
+				</p>
+			</div>
+			<img srcset={phoneSrc} alt='An old phone'/>
 		</div>
 	</section>
 </main>
 
 <style lang="scss">
 	@import '../styles/index.scss';
+
+	main {
+		color: rgb(99, 99, 99);
+	}
 
 	.capwidth {
 		max-width: 1920px;
@@ -133,11 +152,10 @@
 		}
 	}
 		
-	p {
+	p.text {
 		padding: 0;
 		margin: 0;
 		font-weight: 300;
-		color: rgb(99, 99, 99);
 	}
 
 	header {
@@ -300,10 +318,41 @@
 	}
 
 	#contact {
-		margin: 5rem;
+		margin: 15rem 0;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		background: $light-gray;
+
+		#infowrapper {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		img {
+			width: 50%;
+		}
 		#infos {
 			display: flex;
+			justify-content: center;
+			align-items: center;
 			flex-direction: column;
+			width: 50%;
+		}
+		#text {
+			width: 50%;
+		}
+		.button-content {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			p {
+				margin-right: 1rem;
+			}
+			
+		}
+		h1 {
+			margin: 2rem; 
 		}
 	}
 
