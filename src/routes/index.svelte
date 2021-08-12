@@ -2,6 +2,16 @@
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
+	import Button from '$lib/Button.svelte';
+	let phone = '+4900000000';
+	let mail = 'info@lunchtimebox.de';
+
+	function joinNumber() {
+		return 'tel:'+['+49', '2261', '0000000000'].join('');
+	}
+	function joinMail() {
+		return 'mailto:'+['hello', '@', 'lunchtimebox.de'].join('');
+	}
 </script>
 
 <header>
@@ -95,7 +105,14 @@
 	</section>
 	<section id='contact'>
 		<h1>Kontaktiere uns</h1>
-		<a mailto=''></a>
+		<div id='infos'>
+			<Button --margin="1rem" link={joinMail} style='dark'> 
+				<p>Schick uns eine Mail</p>
+			</Button>
+			<Button --margin="1rem" link={joinNumber} style='dark' click={false}> 
+				<p>Oder ruf uns einfach an</p>
+			</Button>
+		</div>
 	</section>
 </main>
 
@@ -137,6 +154,48 @@
 		a:hover {
 			transition: all 1s;
 			text-decoration: underline;
+		}
+	}
+	
+	a.button {
+
+		all: unset;
+		background-color: white;
+		border: none;
+		border-radius: 0.5rem;
+		padding: 1rem 1.2rem;
+		cursor: pointer;
+
+		&.dark {
+			background-color: rgb(24, 24, 24);
+			.content {
+				color: white;
+			}
+		}
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+		position: relative;
+		&::after {
+			position: absolute;
+			content: '"Klick"';
+			top: -2rem;
+			right: -1rem;
+			color: white;
+			font-size: 1rem;
+			transform: rotate(10deg);
+			opacity: 0.6;
+		}
+		.content {
+			color: darkgray;
+			font-size: 1rem;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			p {
+				margin-right: 1rem;
+			}
 		}
 	}
 
@@ -193,40 +252,8 @@
 				font-size: 1.2rem;
 			}
 		}
-		button {
-			all: unset;
-			background-color: white;
-			border: none;
-			border-radius: 0.5rem;
-			padding: 1rem 1.2rem;
-			cursor: pointer;
-			@media (max-width: 1024px) {
-				width: 100%;
-			}
-			position: relative;
-			&::after {
-				position: absolute;
-				content: '"Klick"';
-				top: -2rem;
-				right: -1rem;
-				color: white;
-				font-size: 1rem;
-				transform: rotate(10deg);
-				opacity: 0.6;
-			}
-			.content {
-				color: darkgray;
-				font-size: 1rem;
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
-				p {
-					margin-right: 1rem;
-				}
-			}
-		}
 	}
+	
 	#explainer {
 		padding: 5rem;
 		font-weight: 300;
@@ -245,6 +272,16 @@
 		}
 	}
 
+	#about-us {
+		margin: 5rem;
+		p {
+			max-width: 768px;
+		}
+
+		@media (max-width: 1024px) {
+			margin: 2rem;
+		}
+	}
 	#team {
 		#teambox {
 			padding: 2rem 0 2rem 0;
@@ -262,20 +299,18 @@
 		
 	}
 
+	#contact {
+		margin: 5rem;
+		#infos {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
 	section.dark {
 		background-color: $light-gray;
 	}
 	.white {
 		color: white;
-	}
-	#about-us {
-		margin: 5rem;
-		p {
-			max-width: 768px;
-		}
-
-		@media (max-width: 1024px) {
-			margin: 2rem;
-		}
 	}
 </style>
