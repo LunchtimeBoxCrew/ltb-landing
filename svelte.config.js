@@ -17,6 +17,11 @@ const config = {
 		paths: {
 			assets: '/ltb-landing',
 			base: '/ltb-landing'
+		},
+		vite:{
+			hmr:{
+				port: 3000
+			}
 		}
 	}
 };

@@ -41,7 +41,7 @@
 				<a href="#contact" class="button">
 					<div class="content">
 						<p>Kontaktiere uns</p>
-						<img alt="email icon" src="images/email.svg" />
+						<Icon name="letter" --fill="darkgray"/> 
 					</div>
 				</a>
 			</div>
@@ -65,10 +65,25 @@
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
 		<RoadMapEntry showDesc={true}
+			name="Idee"
+			date="2019"
+			image="ideation"
+			description="Wir sind eine Studierendengruppe an der Technischen Hochschule Köln im Rahmen des Studiengangs Code and Context und bestehen aus sieben Studierenden.
+
+			Die Vision, welche wir als Team verfolgen ist, Menschen die Möglichkeit zu geben, sich wieder als Teil der Gesellschaft zu fühlen.
+			
+			Unsere Vision möchten wir mithilfe der LunchtimeBox realisieren. Die Idee bei der LunchtimeBox ist, eine Essenstransportbox mit einem Bildschirm und Videokommunikationstechnik auszustatten. Unser Ziel dabei ist es, die Technik so einfach wie möglich zu gestalten, um den Nutzer:innen höheren Alters die Möglichkeit zu bieten mit Angehörigen oder anderen Nutzer:innen der Box während des Mittagessens zu kommunizieren. Damit möchten wir zwei Grundbedürfnisse zusammenführen. Zum einen die Nahrungsaufnahme und zum anderen die soziale Interaktion." />
+		<RoadMapEntry showDesc={true}
 			name="Entstehung"
 			date="2019"
 			image="ideation"
-			description="Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage &quot; Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen"
+			description="Um den Hintergrund unserer Idee nachvollziehen zu können müssen wir einen Schritt zurückgehen. Ende 2019 im Rahmen des Kurses Design Thinking hatten wir durch unsere Partner Malteser, die Möglichkeit uns mit ihrem Menüservice auseinanderzusetzen.
+
+			Ziel war es sich den Service anzuschauen und herauszubekommen, wieso dieser Service in Anspruch genommen wird. Dabei wollten wir herausfinden, was diesen Menschen an dem Service gefällt, beziehungsweise was ihnen nicht gefällt. Dafür sind wir in unserer Gruppe nach Ochtrup gereist und haben dort Interviews mit einigen Nutzer:innen und deren Angehörigen geführt. Des Weiteren haben wir einen Auslieferungsfahrer bei seiner täglichen Tour begleitet, um den Prozess besser zu verstehen.
+			
+			Nach Auswertung unserer gesammelten Erkenntnisse sind wir zu der These gekommen, dass sich viele dieser Menschen nicht einen besseren Service wünschen, sondern einfach mehr Kontakt zu anderen Menschen, weil viele von ihnen sehr isoliert leben und die Fahrer:innen meistens die einzigen sozialen Kontakte sind.
+			
+			Wir haben uns dann als Team zusammen Gedanken über eine Lösung gemacht. Dabei ist die Idee der LunchtimeBox entstanden."
 		/>
 		<RoadMapEntry showDesc={false}
 			name="Project Make 1"
@@ -108,23 +123,24 @@
 		<h1 style="margin-bottom: 2rem">Kontaktiere uns</h1>
 		<div id='infowrapper'>
 			<div id='infos'>
-				<Button --margin="0.7rem 0" link={joinMail} style='dark'> 
-					<div class='button-content'>
-						<p>Schick uns eine Mail</p>
-						<Icon name="letter" --fill="white"></Icon>
-					</div>
+
+				<p id='text' style="text-align:center; margin-top: 2rem">
+					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre Unterstützung.
+					Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder <b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung. 
+				</p>
+
+				<br>
+				<br>
+
+				<Button --margin="0.7rem 0" link={joinMail} style='dark' icon="letter"> 
+					Schick uns eine Mail
 				</Button>
-				<Button --margin="0.7rem 0" link={joinNumber} style='dark' click={false}>
-					<div class='button-content'>
-						<p>Oder ruf uns einfach an</p>
-						<Icon name="letter" --fill="white"></Icon>
+				<Button --margin="0.7rem 0" link={joinNumber} style='dark' icon="letter" click={false}>
+					Oder ruf uns einfach an
 					</div> 
 				</Button>
 	
-				<p id='text' style="text-align:center; margin-top: 2rem">
-					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre Unterstützung.
-					Egal, ob mit Testgeräten, Mentoring/Fachwissensaustausch oder Testpersonen - wir freuen uns über jede Art der Unterstützung. 
-				</p>
+
 			</div>
 			<img srcset={phoneSrc} alt='An old phone'/>
 		</div>
@@ -322,12 +338,15 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		background: $light-gray;
+		
+		
+		
 
 		#infowrapper {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			background: $light-gray;
 		}
 		img {
 			width: 50%;
@@ -341,10 +360,12 @@
 		}
 		#text {
 			width: 50%;
+			text-align: left;
 		}
 		.button-content {
 			display: flex;
 			flex-direction: row;
+			align-items: center;
 			justify-content: space-between;
 			p {
 				margin-right: 1rem;
@@ -353,6 +374,19 @@
 		}
 		h1 {
 			margin: 2rem; 
+		}
+
+		@media (max-width: 1024px) {
+			#infowrapper {
+				flex-direction: column;
+			}
+			#infos {
+				width: 100%;
+			}
+			
+			img {
+				width: 100%;
+			}
 		}
 	}
 

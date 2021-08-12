@@ -1,1 +1,2 @@
-export {default as letter} from "./email.svg?raw";
+export {default as letter} from "./letter.svg?raw";
+export {default as phone} from "./phone.svg?raw";

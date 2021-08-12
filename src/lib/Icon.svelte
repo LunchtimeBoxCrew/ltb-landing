@@ -1,11 +1,10 @@
-<script lang="ts">
-
+<script context="module" lang="ts">
   import * as icons from "./images/icons";
+  export type IconType = keyof typeof icons;
+</script>
 
-  console.log(Object.entries(icons));
-
-  export let name: keyof typeof icons;
-
+<script lang="ts">
+  export let name: IconType;
 </script>
 
 <span>

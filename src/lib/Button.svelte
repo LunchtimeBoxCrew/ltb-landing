@@ -1,9 +1,11 @@
 <script lang="ts">
+    import Icon from "./Icon.svelte";
+    import type {IconType} from "./Icon.svelte";
+
 	export let link: string | (() => string);
 	export let style: 'dark' | 'light' = 'light';
-  export let click: boolean = true;
-
-  import Icon from "./Icon.svelte";
+    export let click: boolean = true;
+    export let icon: IconType | null = null;
 
 	function setHref() {
 		this.href = typeof link === 'string' ? link : link();
@@ -14,6 +16,9 @@
 
 	<div class="content" >
 		<slot />
+        {#if icon}
+            <Icon name={icon} --fill={style === 'dark' ? 'white' : 'darkgray'} />
+        {/if}
 	</div>
 </a>
 
