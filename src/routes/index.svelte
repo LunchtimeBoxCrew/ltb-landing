@@ -42,7 +42,11 @@
 		<div class="capwidth">
 			<h2>LunchtimeBox</h2>
 			<p>
-				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen Lunchtimern zu kommunizieren.
+				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen Lunchtimern zu kommunizieren.<br><br>
+				Für viele Menüservicenutzer stellt der Lieferant den einzigen Kontakt dar. Diese sehen die soziale Interaktion als wichtigen Teil ihrer Arbeit, sind aber durch enge Zeitpläne nicht in der Lage, dieses Bedürfnis hinreichend zu bedienen.
+
+				<br><br>Die LunchtimeBox verbindet erstmalig zwei grundlegende Bedürfnisse: Nahrung und soziale Interaktion.
+				<br><br>Durch Videotelefonie können die Nutzer untereinander und mit ihren Angehörigen in Kontakt treten. Mit speziellem, auf die Nutzergruppe zugeschnittenen Design, bauen wir eine Brücke zwischen den Möglichkeiten unserer digitalen Realität und ihren Bedürfnissen. Im Verlaufe des Projektes entwickeln und testen wir die Idee in enger Zusammenarbeit mit unseren Partnern (Malteser) und der Zielgruppe iterativ weiter.
 			</p>
 		</div>
 	</section>
@@ -79,13 +83,15 @@
 	</section>
 
 	<section id="team">
-		<Person name="Majid" description="packt an, zieht durch"/>
-		<Person name="Timo" description="der perfektionistische Informatiker"/>
-		<Person name="Lara" description="unsere kreative Powereinheit"/>
-		<Person name="Dario" description="unsere Emotionale Intelligenz"/>
-		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt"/>
-		<Person name="Fabian" description="&quot;MacMakeThings&quot;"/>
-		<Person name="Max" description="unser kreativer Programmierer"/>
+		<div id='teambox'>
+			<Person name="Majid" description="packt an, zieht durch"/>
+			<Person name="Timo" description="der perfektionistische Informatiker"/>
+			<Person name="Lara" description="unsere kreative Powereinheit"/>
+			<Person name="Dario" description="unsere Emotionale Intelligenz"/>
+			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt"/>
+			<Person name="Fabian" description="&quot;MacMakeThings&quot;"/>
+			<Person name="Max" description="unser kreativer Programmierer"/>
+		</div>
 	</section>
 </main>
 
@@ -125,6 +131,9 @@
 
 		> .capwidth{
 			padding: 5rem;
+			@media (max-width: 1024px) {
+				padding: 2rem;
+			}
 		}
 		> img {
 			position: absolute;
@@ -147,6 +156,9 @@
 		#heading {
 			
 			padding-top: 18rem;
+			@media (max-width: 1024px) {
+				padding-top: 8rem;
+			}
 		}
 		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
 		#footer {
@@ -154,13 +166,18 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding: 8rem 4rem 4rem 0;
+			padding: 8rem 0 4rem 0;
 			@media (max-width: 1024px) {
 				flex-direction: column;
+				padding: 4rem 0 4rem 0;
 			}
 		}
 		#subtextwrapper {
 			font-size: 1.4rem;
+			margin-bottom: 2rem;
+			@media (max-width: 1024px) {
+				font-size: 1.2rem;
+			}
 		}
 		button {
 			all: unset;
@@ -168,8 +185,20 @@
 			border: none;
 			border-radius: 0.5rem;
 			padding: 1rem 1.2rem;
+			cursor: pointer;
 			@media (max-width: 1024px) {
 				width: 100%;
+			}
+			position: relative;
+			&::after {
+				position: absolute;
+				content: '"Klick"';
+				top: -2rem;
+				right: -1rem;
+				color: white;
+				font-size: 1rem;
+				transform: rotate(10deg);
+				opacity: 0.6;
 			}
 			#content {
 				color: gray;
@@ -191,10 +220,16 @@
 			font-weight: 400;
 			color: rgb(41, 41, 41);
 			padding-bottom: 3rem;
+			@media (max-width: 1024px) {
+				padding-bottom: 2rem;
+			}
 		}
 		p {
-			width: 60%;
+			max-width: 768px;
 			color: rgb(99, 99, 99);
+		}
+		@media (max-width: 1024px) {
+			padding: 4rem 2rem;
 		}
 	}
 
@@ -206,11 +241,20 @@
 	}
 
 	#team {
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		flex-wrap: wrap;
-		width: 100%;
+		#teambox {
+			padding: 2rem 0 2rem 0;
+			background: $light-gray;
+			margin: 0rem;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
+
+		}
+		@media (min-width: 580px) {
+			margin: 5rem;
+		}
+		
 	}
 
 	section.dark {
@@ -221,5 +265,12 @@
 	}
 	#about-us {
 		margin: 5rem;
+		p {
+			max-width: 1024px;
+		}
+
+		@media (max-width: 1024px) {
+			margin: 2rem;
+		}
 	}
 </style>
