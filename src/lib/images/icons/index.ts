@@ -1,0 +1,1 @@
+export {default as letter} from "./email.svg?raw";
