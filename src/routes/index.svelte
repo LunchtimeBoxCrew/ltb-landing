@@ -53,19 +53,19 @@
 
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
-		<RoadMapEntry
+		<RoadMapEntry showDesc={true}
 			name="Entstehung"
 			date="2019"
 			image="ideation"
 			description="Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage &quot; Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen"
 		/>
-		<RoadMapEntry
+		<RoadMapEntry showDesc={false}
 			name="Project Make 1"
 			date="2020"
 			image="project"
 			description="Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen"
 		/>
-		<RoadMapEntry
+		<RoadMapEntry showDesc={false}
 			name="Kickstart"
 			date="2021"
 			image="acceleration"

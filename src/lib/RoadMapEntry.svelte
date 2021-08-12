@@ -4,13 +4,13 @@
 	export let date: string;
 	export let description: string;
     export let image:string;
+    export let showDesc:boolean;
 
     import * as StockImages from "./images/stock";
 
-	let showDesc = false;
 	function switchDesc() {
 		console.log('desc was ' + showDesc);
-		showDesc ? (showDesc = false) : (showDesc = true);
+        showDesc = !showDesc;
 	}
 </script>
 <div class='entry' on:click={switchDesc}>
