@@ -15,6 +15,9 @@
 </a>
 
 <style lang="scss">
+
+@import '../styles/index.scss';
+
 a {
 
     all: unset;
@@ -24,11 +27,13 @@ a {
     padding: 1rem 1.2rem;
     cursor: pointer;
     position: relative;
+    max-width: 400px;
+    margin: var(--margin);
 
     &.dark {
-        background-color: rgb(24, 24, 24);
-        .content >* {
-            color: white;
+        background-color: $green;
+        .content > :global(*)  {
+            color: white ;
         }
     }
 
