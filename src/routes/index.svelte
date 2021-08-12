@@ -74,7 +74,7 @@
 	</section>
 
 	<section id="about-us" class="capwidth">
-		<h2>About us</h2>
+		<h2>Team</h2>
 		<p>
 			Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
 			Design, Entrepeneurship und dem gemeinsamen Wunsch diese Fähigkeiten in einem sozialen Kontext
@@ -103,10 +103,20 @@
 		margin: 0 auto;
 	}
 
+	h2 {
+		font-weight: 400;
+		color: rgb(41, 41, 41);
+		padding-bottom: 2rem;
+		@media (max-width: 1024px) {
+			padding-bottom: 2rem;
+		}
+	}
+		
 	p {
 		padding: 0;
 		margin: 0;
 		font-weight: 300;
+		color: rgb(99, 99, 99);
 	}
 
 	header {
@@ -201,7 +211,7 @@
 				opacity: 0.6;
 			}
 			#content {
-				color: gray;
+				color: darkgray;
 				font-size: 1rem;
 				display: flex;
 				flex-direction: row;
@@ -216,17 +226,8 @@
 	#explainer {
 		padding: 5rem;
 		font-weight: 300;
-		h2 {
-			font-weight: 400;
-			color: rgb(41, 41, 41);
-			padding-bottom: 3rem;
-			@media (max-width: 1024px) {
-				padding-bottom: 2rem;
-			}
-		}
 		p {
 			max-width: 768px;
-			color: rgb(99, 99, 99);
 		}
 		@media (max-width: 1024px) {
 			padding: 4rem 2rem;
@@ -234,9 +235,9 @@
 	}
 
 	#roadmap {
-		margin: 5rem;
-		h2 {
-			font-weight: 700;
+		padding: 5rem;
+		@media (max-width: 1024px) {
+			padding: 2rem;
 		}
 	}
 
@@ -266,7 +267,7 @@
 	#about-us {
 		margin: 5rem;
 		p {
-			max-width: 1024px;
+			max-width: 768px;
 		}
 
 		@media (max-width: 1024px) {

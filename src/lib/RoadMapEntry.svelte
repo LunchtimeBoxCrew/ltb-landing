@@ -41,7 +41,7 @@
         position: relative;
         overflow: hidden;
         height: 8rem;
-        border-radius: 1rem;
+        border-radius: 7px;
     }
     img {
         width: 100%;
@@ -51,9 +51,11 @@
         display: flex;
         flex-direction: row;
         width: 100%;
+        height: 100%;
         justify-content: space-between;
         top: 0;
         left: 0;
+        background-color: rgba(0,0,0,0.3);
     }
     .heading {
         margin: 1rem;
@@ -70,5 +72,12 @@
     }
     .gray {
         background-color: $light-gray;
+    }
+
+    @media (max-width: 768px) {
+        .entry {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
     }
 </style>
