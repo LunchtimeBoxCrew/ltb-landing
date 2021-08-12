@@ -1,14 +1,4 @@
 <script lang="ts">
-	import PortraitDario from '$lib/images/people/dario.jpeg?w=300;400;500&format=webp&srcset';
-	import PortraitFabian from '$lib/images/people/fabian.jpeg?w=300;400;500&format=webp&srcset';
-	import PortraitLara from '$lib/images/people/lara.jpeg?w=300;400;500&format=webp&srcset';
-	import PortraitMajid from '$lib/images/people/majid.jpeg?w=300;400;500&format=webp&srcset';
-	import PortraitMax from '$lib/images/people/max.jpeg?w=300;400;500&format=webp&srcset';
-	import PortraitJonas from '$lib/images/people/naski.jpeg?w=300;400;500&format=webp&srcset';
-	import PortraitTimo from '$lib/images/people/timo.jpeg?w=300;400;500&format=webp&srcset';
-	import StockAcceleration from '$lib/images/stock/acceleration.jpg?w=300;400;500&format=webp&srcset';
-	import StockIdeation from '$lib/images/stock/ideation.jpg?w=300;400;500&format=webp&srcset';
-	import StockProject from '$lib/images/stock/project.jpg?w=300;400;500&format=webp&srcset';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
@@ -40,48 +30,48 @@
 					<p>Kontaktiere uns</p>
 					<img alt="email icon" src="images/email.svg" />
 				</div>
-			</button>
-		</div>
+				<button>
+					<div id="content">
+						<p> Kontaktiere uns </p>
+						<img src='images/email.svg' alt='Email Icon'/>
+					</div>
+				</button>
+			</div>
 	</section>
 
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
-		<h2>LunchtimeBox</h2>
-		<p id="text">
-			Die Lunchtimebox ermöglicht Teilnahme am sozialen Leben mit nur einem Klick Lorem ipsum dolor
-			sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet
-			Lorem ipsum dolor sit amet Lorem ipsm dfgodfngdfg sdf gsdfg sdf gsdf gsd fgsdfgsfvcb sdfbs
-			dfvsdfv sdfs dfbsdfbsdf bsdfb sfgb sfgb sfgb sfgbs fbsf gbsfgb sfgb sdfgb sdfb sdfgb sdfb sdfb
-			sdfb sdfb sdb sd bsdf bsd fb sdfb sdfb sfdgb sdfg bsdf bsd
-		</p>
+		<div class="capwidth">
+			<h2>LunchtimeBox</h2>
+			<p>
+				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen Lunchtimern zu kommunizieren.
+			</p>
+		</div>
 	</section>
 
-	<section id="roadmap">
+	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
 		<RoadMapEntry
 			name="Entstehung"
 			date="2019"
+			image="ideation"
 			description="Im Kurs Design Thinking mit Ivonne Preußer stellte sich die Frage &quot; Was brauchen Nutzer von Essen auf Rädern Services wirklich. Diesem Ansatz folgend entwickelten wir die Idee der Lunchtimebox mit einem ersten Prototypen"
-		>
-			<img srcset={StockIdeation} alt="Ideation" />
-		</RoadMapEntry>
+		/>
 		<RoadMapEntry
 			name="Project Make 1"
 			date="2020"
+			image="project"
 			description="Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen"
-		>
-			<img srcset={StockProject} alt="Project Make 1" />
-		</RoadMapEntry>
+		/>
 		<RoadMapEntry
 			name="Kickstart"
 			date="2021"
+			image="acceleration"
 			description="Im Verlauf des Project Make 1 konnten wir das Team des Kickstart@TH Köln mit unserer Idee überzeugen und eine Förderung von 7.500€ für die Weiterentwicklung unseres Prototypen erhalten."
-		>
-			<img srcset={StockAcceleration} alt="Kickstart" />
-		</RoadMapEntry>
+		/>
 	</section>
 
-	<section id="about-us">
+	<section id="about-us" class="capwidth">
 		<h2>About us</h2>
 		<p>
 			Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
@@ -91,32 +81,23 @@
 	</section>
 
 	<section id="team">
-		<Person name="Majid" description="packt an, zieht durch">
-			<img srcset={PortraitMajid} type="image/webp" alt="person" />
-		</Person>
-		<Person name="Timo" description="der perfektionistische Informatiker">
-			<img srcset={PortraitTimo} type="image/webp" alt="person" />
-		</Person>
-		<Person name="Lara" description="unsere kreative Powereinheit">
-			<img srcset={PortraitLara} type="image/webp" alt="person" />
-		</Person>
-		<Person name="Dario" description="unsere Emotionale Intelligenz">
-			<img srcset={PortraitDario} type="image/webp" alt="person" />
-		</Person>
-		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt">
-			<img srcset={PortraitJonas} type="image/webp" alt="person" />
-		</Person>
-		<Person name="Fabian" description="&quot;MacMakeThings&quot;">
-			<img srcset={PortraitFabian} type="image/webp" alt="person" />
-		</Person>
-		<Person name="Max" description="unser kreativer Programmierer">
-			<img srcset={PortraitMax} type="image/webp" alt="person" />
-		</Person>
+		<Person name="Majid" description="packt an, zieht durch"/>
+		<Person name="Timo" description="der perfektionistische Informatiker"/>
+		<Person name="Lara" description="unsere kreative Powereinheit"/>
+		<Person name="Dario" description="unsere Emotionale Intelligenz"/>
+		<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt"/>
+		<Person name="Fabian" description="&quot;MacMakeThings&quot;"/>
+		<Person name="Max" description="unser kreativer Programmierer"/>
 	</section>
 </main>
 
 <style lang="scss">
 	@import '../styles/index.scss';
+
+	.capwidth {
+		max-width: 1920px;
+		margin: 0 auto;
+	}
 
 	p {
 		padding: 0;
@@ -173,7 +154,7 @@
 			font-size: 1.4rem;
 			width: 48rem;
 		}
-		> #footer > #contact {
+		button {
 			all: unset;
 			background-color: white;
 			width: 16rem;
@@ -193,12 +174,12 @@
 		font-weight: 300;
 		h2 {
 			font-weight: 400;
-			color: gray;
+			color: rgb(41, 41, 41);
 			padding-bottom: 3rem;
 		}
-		#text {
+		p {
 			width: 60%;
-			color: darkgray;
+			color: rgb(99, 99, 99);
 		}
 	}
 
