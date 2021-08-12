@@ -27,6 +27,7 @@
 		margin-bottom: 1rem;
 		overflow: hidden;
 		border-radius: 1rem;
+		background: rgb(230, 232, 233);
 
 	}
 	#wrapper :global(img) {
@@ -38,10 +39,8 @@
 		object-fit: cover;
 
 		position: relative;
-		right: -50px;
-		&:after {
-			content: 'I want to be a png';
-		}
+		right: -80px;
+		mix-blend-mode: multiply;
 	}
 
 	#wrapper :global(div) {
