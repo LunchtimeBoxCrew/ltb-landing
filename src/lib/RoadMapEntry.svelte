@@ -14,7 +14,7 @@
 	}
 </script>
 <div class='entry' on:click={switchDesc}>
-    <div class='wrapper'>
+    <div class='wrapper' class:opened={showDesc}>
         <img srcset={StockImages[image]} alt='descriptive image of {name}' />
         <div class='header'>
             <h1 class='heading'>{name}</h1>
@@ -33,15 +33,21 @@
     .entry {
         border-radius: 1rem;
         cursor: pointer;
-        width: 50%;
+        /* width: 50%; */
+        max-width: 768px;
         background-color: #f8f8f8;
         margin-bottom: 4rem;
     }
     .wrapper {
         position: relative;
         overflow: hidden;
-        height: 8rem;
-        border-radius: 7px;
+        height: 10rem;
+        border-radius: 13px;
+        transition: border-radius 0.5s;
+        &.opened {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
     }
     img {
         width: 100%;
@@ -59,16 +65,18 @@
     }
     .heading {
         margin: 1rem;
-        font-weight: 900;
+        font-size: 1.5rem;
+        font-weight: normal;
         color: white;
     }
     .date {
+        /* font-weight: 900; */
         margin: 1rem;
-        font-size: 2rem;
-        color: white;
+        font-size: 2.3rem;
+        color: rgba($color: #FFFFFF, $alpha: 0.6);
     }
     .desc {
-        padding: 1rem;
+        padding: 2.3rem 1.7rem;
     }
     .gray {
         background-color: $light-gray;

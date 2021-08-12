@@ -27,14 +27,14 @@
 						Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
 					</p>
 				</div>
-				<button id="contact">
-					<div id="content">
+				<a href="#contact" class="button">
+					<div class="content">
 						<p>Kontaktiere uns</p>
 						<img alt="email icon" src="images/email.svg" />
 					</div>
-				</div>
-				
+				</a>
 			</div>
+		</div>
 	</section>
 
 	<!-- Explainer Section -->
@@ -92,6 +92,10 @@
 			<Person name="Fabian" description="&quot;MacMakeThings&quot;"/>
 			<Person name="Max" description="unser kreativer Programmierer"/>
 		</div>
+	</section>
+	<section id='contact'>
+		<h1>Kontaktiere uns</h1>
+		<a mailto=''></a>
 	</section>
 </main>
 
@@ -210,7 +214,7 @@
 				transform: rotate(10deg);
 				opacity: 0.6;
 			}
-			#content {
+			.content {
 				color: darkgray;
 				font-size: 1rem;
 				display: flex;
