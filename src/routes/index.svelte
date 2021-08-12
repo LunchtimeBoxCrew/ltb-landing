@@ -137,7 +137,6 @@
 				</Button>
 				<Button --margin="0.7rem 0" link={joinNumber} style='dark' icon="letter" click={false}>
 					Oder ruf uns einfach an
-					</div> 
 				</Button>
 	
 
