@@ -1,10 +1,12 @@
 <script lang="ts">
+	import ProfileImage from '../lib/images/people/ProfileImage.svelte';
+
 	export let name: string;
 	export let description: string;
 </script>
 
 <div id="wrapper">
-	<slot />
+	<ProfileImage name={name} />
 	<div id="infobox" class="ltbgreen white">
 		<h2 class="xl">
 			{name}
@@ -15,7 +17,8 @@
 	</div>
 </div>
 
-<style>
+<style lang='scss'>
+    @import '../styles/index.scss';
 	#wrapper {
 		height: 12rem;
 		width: 100%;
@@ -24,6 +27,7 @@
 		margin-bottom: 1rem;
 		overflow: hidden;
 		border-radius: 1rem;
+
 	}
 	#wrapper :global(img) {
 		display: block;
@@ -32,6 +36,12 @@
 
 		overflow-y: hidden;
 		object-fit: cover;
+
+		position: relative;
+		right: -50px;
+		&:after {
+			content: 'I want to be a png';
+		}
 	}
 
 	#wrapper :global(div) {
@@ -57,16 +67,17 @@
 	/*
         Definitions
     */
-	div.ltbgreen {
-		background: #00877c;
-	}
-	.xl {
-		font-size: 2rem;
-	}
-	.m {
-		font-size: 1rem;
-	}
-	.white {
-		color: white;
-	}
+    div.ltbgreen {
+        background: $green;
+    }
+    .xl {
+        font-size: 2rem;
+    }
+    .m {
+        font-size: 1rem;
+    }
+    .white {
+        color: white;
+    }
+
 </style>
