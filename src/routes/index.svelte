@@ -3,7 +3,7 @@
 	import Link from '$lib/Link.svelte';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
-	import * as content from '../content';
+	import Content from '../content/Content.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
 
 	function joinNumber() {
@@ -47,40 +47,24 @@
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
 		<div class="capwidth">
-			{@html content.intro}
+			<Content file="intro" />
 		</div>
 	</section>
 
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
-		<RoadMapEntry
-			showDesc={true}
-			name="Idee"
-			date="2019"
-			image="ideation"
-			description={content.idea}
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Entstehung"
-			date="2019"
-			image="ideation"
-			description={content.formation}
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Project Make 1"
-			date="2020"
-			image="project"
-			description="Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen"
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Kickstart"
-			date="2021"
-			image="acceleration"
-			description="Im Verlauf des Project Make 1 konnten wir das Team des Kickstart@TH Köln mit unserer Idee überzeugen und eine Förderung von 7.500€ für die Weiterentwicklung unseres Prototypen erhalten."
-		/>
+		<RoadMapEntry showDesc={true} name="Idee" date="2019" image="ideation">
+			<Content file="idea" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Entstehung" date="2019" image="ideation">
+			<Content file="formation" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Project Make 1" date="2020" image="project">
+			<Content file="test" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Kickstart" date="2021" image="acceleration">
+			<Content file="testing" />
+		</RoadMapEntry>
 	</section>
 
 	<section id="about-us" class="capwidth">
@@ -94,13 +78,13 @@
 
 	<section id="team">
 		<div id="teambox">
-			<Person name="majid" description="packt an, zieht durch" />
-			<Person name="timo" description="der perfektionistische Informatiker" />
-			<Person name="lara" description="unsere kreative Powereinheit" />
-			<Person name="dario" description="unsere Emotionale Intelligenz" />
-			<Person name="jonas" description="der immer noch zwei Schritte weiterdenkt" />
-			<Person name="fabian" description="&quot;MacMakeThings&quot;" />
-			<Person name="max" description="unser kreativer Programmierer" />
+			<Person name="Majid" description="packt an, zieht durch" />
+			<Person name="Timo" description="der perfektionistische Informatiker" />
+			<Person name="Lara" description="unsere kreative Powereinheit" />
+			<Person name="Dario" description="unsere Emotionale Intelligenz" />
+			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" />
+			<Person name="Fabian" description="&quot;MacMakeThings&quot;" />
+			<Person name="Max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
 	<section id="contact">
