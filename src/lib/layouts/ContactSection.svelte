@@ -7,8 +7,15 @@
 </script>
 
 <section>
-	<div class="card">
-		<h2>Kontakt</h2>
+	<div class="left">
+		<h2>Kontaktiere uns</h2>
+		<p>
+			Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre Unterstützung.
+			Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder
+			<b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung.
+		</p>
+	</div>
+	<div class="right">
 		<div class="buttons">
 			<Link link={mail} click={false}>
 				<Icon name="letter" --fill="#00877c" />
@@ -17,11 +24,6 @@
 				<Icon name="phone" --fill="#00877c" />
 			</Link>
 		</div>
-		<p>
-			Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre Unterstützung.
-			Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder
-			<b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung.
-		</p>
 	</div>
 </section>
 
@@ -29,25 +31,20 @@
 	@import '../../styles/index.scss';
 	section {
 		margin: 7rem 0;
-		.card {
-			background: $green;
-			margin: 0 auto;
-			max-width: 1024px;
-			border-radius: 7px;
-			padding: 7rem;
-			display: flex;
-			/* justify-content: space-between; */
-			align-items: center;
-			flex-direction: column;
-			color: white;
-		}
+		background: $green;
+		margin: 0 auto;
+		padding: 7rem 15rem;
+		display: flex;
+		justify-content: space-between;
+		color: white;
+		font-weight: 400;
 
 		h2 {
-			font-weight: 400;
-			/* margin-bottom: 2rem;
+			font-weight: 200;
+			margin-bottom: 2rem;
 			@media (max-width: 1024px) {
 				margin-bottom: 2rem;
-			} */
+			}
 		}
 
 		.buttons {
@@ -69,10 +66,10 @@
 		}
 
 		p {
-			color: #ececec;
-			text-align: center;
-			font-size: 0.8rem;
-			max-width: 400px;
+			color: #f8f8f8;
+			font-size: 0.85rem;
+			max-width: 430px;
+			line-height: 1.35em;
 		}
 	}
 </style>
