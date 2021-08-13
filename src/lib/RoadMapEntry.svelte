@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+	import * as StockImages from './images/stock';
+
 	export let name: string;
 	export let date: string;
-	export let description: string;
 	export let image: string;
 	export let showDesc: boolean;
-
-	import * as StockImages from './images/stock';
 
 	function switchDesc() {
 		console.log('desc was ' + showDesc);
@@ -24,7 +23,9 @@
 	</div>
 	{#if showDesc}
 		<div transition:slide>
-			<p class="desc">{description}</p>
+			<p class="desc">
+				<slot />
+			</p>
 		</div>
 	{/if}
 </div>

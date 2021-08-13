@@ -53,44 +53,18 @@
 
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
-		<RoadMapEntry
-			showDesc={true}
-			name="Idee"
-			date="2019"
-			image="ideation"
-			description="Wir sind eine Studierendengruppe an der Technischen Hochschule Köln im Rahmen des Studiengangs Code and Context und bestehen aus sieben Studierenden.
-
-			Die Vision, welche wir als Team verfolgen ist, Menschen die Möglichkeit zu geben, sich wieder als Teil der Gesellschaft zu fühlen.
-			
-			Unsere Vision möchten wir mithilfe der LunchtimeBox realisieren. Die Idee bei der LunchtimeBox ist, eine Essenstransportbox mit einem Bildschirm und Videokommunikationstechnik auszustatten. Unser Ziel dabei ist es, die Technik so einfach wie möglich zu gestalten, um den Nutzer:innen höheren Alters die Möglichkeit zu bieten mit Angehörigen oder anderen Nutzer:innen der Box während des Mittagessens zu kommunizieren. Damit möchten wir zwei Grundbedürfnisse zusammenführen. Zum einen die Nahrungsaufnahme und zum anderen die soziale Interaktion."
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Entstehung"
-			date="2019"
-			image="ideation"
-			description="Um den Hintergrund unserer Idee nachvollziehen zu können müssen wir einen Schritt zurückgehen. Ende 2019 im Rahmen des Kurses Design Thinking hatten wir durch unsere Partner Malteser, die Möglichkeit uns mit ihrem Menüservice auseinanderzusetzen.
-
-			Ziel war es sich den Service anzuschauen und herauszubekommen, wieso dieser Service in Anspruch genommen wird. Dabei wollten wir herausfinden, was diesen Menschen an dem Service gefällt, beziehungsweise was ihnen nicht gefällt. Dafür sind wir in unserer Gruppe nach Ochtrup gereist und haben dort Interviews mit einigen Nutzer:innen und deren Angehörigen geführt. Des Weiteren haben wir einen Auslieferungsfahrer bei seiner täglichen Tour begleitet, um den Prozess besser zu verstehen.
-			
-			Nach Auswertung unserer gesammelten Erkenntnisse sind wir zu der These gekommen, dass sich viele dieser Menschen nicht einen besseren Service wünschen, sondern einfach mehr Kontakt zu anderen Menschen, weil viele von ihnen sehr isoliert leben und die Fahrer:innen meistens die einzigen sozialen Kontakte sind.
-			
-			Wir haben uns dann als Team zusammen Gedanken über eine Lösung gemacht. Dabei ist die Idee der LunchtimeBox entstanden."
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Project Make 1"
-			date="2020"
-			image="project"
-			description="Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen"
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Kickstart"
-			date="2021"
-			image="acceleration"
-			description="Im Verlauf des Project Make 1 konnten wir das Team des Kickstart@TH Köln mit unserer Idee überzeugen und eine Förderung von 7.500€ für die Weiterentwicklung unseres Prototypen erhalten."
-		/>
+		<RoadMapEntry showDesc={true} name="Idee" date="2019" image="ideation">
+			<Content file="idea" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Entstehung" date="2019" image="ideation">
+			<Content file="idea" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Project Make 1" date="2020" image="project">
+			<Content file="idea" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Kickstart" date="2021" image="acceleration">
+			<Content file="idea" />
+		</RoadMapEntry>
 	</section>
 
 	<section id="about-us" class="capwidth">
