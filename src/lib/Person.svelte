@@ -1,12 +1,15 @@
 <script lang="ts">
 	import ProfileImage from '../lib/images/people/ProfileImage.svelte';
 
-	export let name: string;
+	import type { PeopleType } from '../lib/images/people/ProfileImage.svelte';
+
+	export let name: PeopleType;
+
 	export let description: string;
 </script>
 
 <div id="wrapper">
-	<ProfileImage name={name} />
+	<ProfileImage {name} />
 	<div id="infobox" class="ltbgreen white">
 		<h2 class="xl">
 			{name}
@@ -17,8 +20,8 @@
 	</div>
 </div>
 
-<style lang='scss'>
-    @import '../styles/index.scss';
+<style lang="scss">
+	@import '../styles/index.scss';
 	#wrapper {
 		height: 12rem;
 		width: 100%;
@@ -28,7 +31,6 @@
 		overflow: hidden;
 		border-radius: 1rem;
 		background: rgb(230, 232, 233);
-
 	}
 	#wrapper :global(img) {
 		display: block;
@@ -66,19 +68,18 @@
 	/*
         Definitions
     */
-    div.ltbgreen {
-        background: $green;
-    }
-    .xl {
-        font-size: 2rem;
-		  margin-bottom: 0.5rem;
-    }
-    .m {
-        font-size: 0.9rem;
-		  color: rgb(221, 221, 221);
-    }
-    .white {
-        color: white;
-    }
-
+	div.ltbgreen {
+		background: $green;
+	}
+	.xl {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+	}
+	.m {
+		font-size: 0.9rem;
+		color: rgb(221, 221, 221);
+	}
+	.white {
+		color: white;
+	}
 </style>
