@@ -4,14 +4,14 @@
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
 	import Button from '$lib/Button.svelte';
 	import Icon from '$lib/Icon.svelte';
-	import {phone as phoneSrc} from '$lib/images/stock';
-	import {letter as letterSvg} from '$lib/images/icons';
+	import { phone as phoneSrc } from '$lib/images/stock';
+	import { letter as letterSvg } from '$lib/images/icons';
 
 	function joinNumber() {
-		return 'tel:'+['+49', '2261', '0000000000'].join('');
+		return 'tel:' + ['+49', '2261', '0000000000'].join('');
 	}
 	function joinMail() {
-		return 'mailto:'+['hello', '@', 'lunchtimebox.de'].join('');
+		return 'mailto:' + ['hello', '@', 'lunchtimebox.de'].join('');
 	}
 </script>
 
@@ -41,7 +41,7 @@
 				<a href="#contact" class="button">
 					<div class="content">
 						<p>Kontaktiere uns</p>
-						<Icon name="letter" --fill="darkgray"/> 
+						<Icon name="letter" --fill="darkgray" />
 					</div>
 				</a>
 			</div>
@@ -53,18 +53,28 @@
 		<div class="capwidth">
 			<h2>LunchtimeBox</h2>
 			<p>
-				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen Lunchtimern zu kommunizieren.<br><br>
-				Für viele Menüservicenutzer stellt der Lieferant den einzigen Kontakt dar. Diese sehen die soziale Interaktion als wichtigen Teil ihrer Arbeit, sind aber durch enge Zeitpläne nicht in der Lage, dieses Bedürfnis hinreichend zu bedienen.
+				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und
+				Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen
+				Lunchtimern zu kommunizieren.<br /><br />
+				Für viele Menüservicenutzer stellt der Lieferant den einzigen Kontakt dar. Diese sehen die soziale
+				Interaktion als wichtigen Teil ihrer Arbeit, sind aber durch enge Zeitpläne nicht in der Lage,
+				dieses Bedürfnis hinreichend zu bedienen.
 
-				<br><br>Die LunchtimeBox verbindet erstmalig zwei grundlegende Bedürfnisse: Nahrung und soziale Interaktion.
-				<br><br>Durch Videotelefonie können die Nutzer untereinander und mit ihren Angehörigen in Kontakt treten. Mit speziellem, auf die Nutzergruppe zugeschnittenen Design, bauen wir eine Brücke zwischen den Möglichkeiten unserer digitalen Realität und ihren Bedürfnissen. Im Verlaufe des Projektes entwickeln und testen wir die Idee in enger Zusammenarbeit mit unseren Partnern (Malteser) und der Zielgruppe iterativ weiter.
+				<br /><br />Die LunchtimeBox verbindet erstmalig zwei grundlegende Bedürfnisse: Nahrung und
+				soziale Interaktion.
+				<br /><br />Durch Videotelefonie können die Nutzer untereinander und mit ihren Angehörigen
+				in Kontakt treten. Mit speziellem, auf die Nutzergruppe zugeschnittenen Design, bauen wir
+				eine Brücke zwischen den Möglichkeiten unserer digitalen Realität und ihren Bedürfnissen. Im
+				Verlaufe des Projektes entwickeln und testen wir die Idee in enger Zusammenarbeit mit
+				unseren Partnern (Malteser) und der Zielgruppe iterativ weiter.
 			</p>
 		</div>
 	</section>
 
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
-		<RoadMapEntry showDesc={true}
+		<RoadMapEntry
+			showDesc={true}
 			name="Idee"
 			date="2019"
 			image="ideation"
@@ -72,8 +82,10 @@
 
 			Die Vision, welche wir als Team verfolgen ist, Menschen die Möglichkeit zu geben, sich wieder als Teil der Gesellschaft zu fühlen.
 			
-			Unsere Vision möchten wir mithilfe der LunchtimeBox realisieren. Die Idee bei der LunchtimeBox ist, eine Essenstransportbox mit einem Bildschirm und Videokommunikationstechnik auszustatten. Unser Ziel dabei ist es, die Technik so einfach wie möglich zu gestalten, um den Nutzer:innen höheren Alters die Möglichkeit zu bieten mit Angehörigen oder anderen Nutzer:innen der Box während des Mittagessens zu kommunizieren. Damit möchten wir zwei Grundbedürfnisse zusammenführen. Zum einen die Nahrungsaufnahme und zum anderen die soziale Interaktion." />
-		<RoadMapEntry showDesc={true}
+			Unsere Vision möchten wir mithilfe der LunchtimeBox realisieren. Die Idee bei der LunchtimeBox ist, eine Essenstransportbox mit einem Bildschirm und Videokommunikationstechnik auszustatten. Unser Ziel dabei ist es, die Technik so einfach wie möglich zu gestalten, um den Nutzer:innen höheren Alters die Möglichkeit zu bieten mit Angehörigen oder anderen Nutzer:innen der Box während des Mittagessens zu kommunizieren. Damit möchten wir zwei Grundbedürfnisse zusammenführen. Zum einen die Nahrungsaufnahme und zum anderen die soziale Interaktion."
+		/>
+		<RoadMapEntry
+			showDesc={true}
 			name="Entstehung"
 			date="2019"
 			image="ideation"
@@ -85,13 +97,15 @@
 			
 			Wir haben uns dann als Team zusammen Gedanken über eine Lösung gemacht. Dabei ist die Idee der LunchtimeBox entstanden."
 		/>
-		<RoadMapEntry showDesc={false}
+		<RoadMapEntry
+			showDesc={false}
 			name="Project Make 1"
 			date="2020"
 			image="project"
 			description="Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen"
 		/>
-		<RoadMapEntry showDesc={false}
+		<RoadMapEntry
+			showDesc={false}
 			name="Kickstart"
 			date="2021"
 			image="acceleration"
@@ -109,39 +123,37 @@
 	</section>
 
 	<section id="team">
-		<div id='teambox'>
-			<Person name="Majid" description="packt an, zieht durch"/>
-			<Person name="Timo" description="der perfektionistische Informatiker"/>
-			<Person name="Lara" description="unsere kreative Powereinheit"/>
-			<Person name="Dario" description="unsere Emotionale Intelligenz"/>
-			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt"/>
-			<Person name="Fabian" description="&quot;MacMakeThings&quot;"/>
-			<Person name="Max" description="unser kreativer Programmierer"/>
+		<div id="teambox">
+			<Person name="Majid" description="packt an, zieht durch" />
+			<Person name="Timo" description="der perfektionistische Informatiker" />
+			<Person name="Lara" description="unsere kreative Powereinheit" />
+			<Person name="Dario" description="unsere Emotionale Intelligenz" />
+			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" />
+			<Person name="Fabian" description="&quot;MacMakeThings&quot;" />
+			<Person name="Max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
-	<section id='contact'>
+	<section id="contact">
 		<h1 style="margin-bottom: 2rem">Kontaktiere uns</h1>
-		<div id='infowrapper'>
-			<div id='infos'>
-
-				<p id='text' style="text-align:center; margin-top: 2rem">
-					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre Unterstützung.
-					Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder <b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung. 
+		<div id="infowrapper">
+			<div id="infos">
+				<p id="text" style="text-align:center; margin-top: 2rem">
+					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre
+					Unterstützung. Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder
+					<b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung.
 				</p>
 
-				<br>
-				<br>
+				<br />
+				<br />
 
-				<Button --margin="0.7rem 0" link={joinMail} style='dark' icon="letter"> 
+				<Button --margin="0.7rem 0" link={joinMail} style="dark" icon="letter">
 					Schick uns eine Mail
 				</Button>
-				<Button --margin="0.7rem 0" link={joinNumber} style='dark' icon="letter" click={false}>
+				<Button --margin="0.7rem 0" link={joinNumber} style="dark" icon="letter" click={false}>
 					Oder ruf uns einfach an
 				</Button>
-	
-
 			</div>
-			<img srcset={phoneSrc} alt='An old phone'/>
+			<img srcset={phoneSrc} alt="An old phone" />
 		</div>
 	</section>
 </main>
@@ -166,7 +178,7 @@
 			padding-bottom: 2rem;
 		}
 	}
-		
+
 	p.text {
 		padding: 0;
 		margin: 0;
@@ -189,9 +201,8 @@
 			text-decoration: underline;
 		}
 	}
-	
-	a.button {
 
+	a.button {
 		all: unset;
 		background-color: white;
 		border: none;
@@ -235,7 +246,7 @@
 	#intro {
 		position: relative;
 
-		> .capwidth{
+		> .capwidth {
 			padding: 5rem;
 			@media (max-width: 1024px) {
 				padding: 2rem;
@@ -260,7 +271,6 @@
 			}
 		}
 		#heading {
-			
 			padding-top: 18rem;
 			@media (max-width: 1024px) {
 				padding-top: 8rem;
@@ -286,7 +296,7 @@
 			}
 		}
 	}
-	
+
 	#explainer {
 		padding: 5rem;
 		font-weight: 300;
@@ -316,20 +326,18 @@
 		}
 	}
 	#team {
+		background: $light-gray;
 		#teambox {
 			padding: 2rem 0 2rem 0;
-			background: $light-gray;
 			margin: 0rem;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
-
 		}
 		@media (min-width: 580px) {
-			margin: 5rem;
+			padding: 5rem;
 		}
-		
 	}
 
 	#contact {
@@ -337,9 +345,6 @@
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
-		
-		
-		
 
 		#infowrapper {
 			display: flex;
@@ -369,10 +374,9 @@
 			p {
 				margin-right: 1rem;
 			}
-			
 		}
 		h1 {
-			margin: 2rem; 
+			margin: 2rem;
 		}
 
 		@media (max-width: 1024px) {
@@ -382,7 +386,7 @@
 			#infos {
 				width: 100%;
 			}
-			
+
 			img {
 				width: 100%;
 			}
