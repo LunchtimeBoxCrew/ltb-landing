@@ -247,7 +247,7 @@
 		position: relative;
 
 		> .capwidth {
-			padding: 5rem;
+
 			@media (max-width: 1024px) {
 				padding: 2rem;
 			}
@@ -298,7 +298,7 @@
 	}
 
 	#explainer {
-		padding: 5rem;
+		padding: 5rem 0 5rem 0;
 		font-weight: 300;
 		p {
 			max-width: 768px;
@@ -306,17 +306,23 @@
 		@media (max-width: 1024px) {
 			padding: 4rem 2rem;
 		}
+		@media (max-width: 1920px) {
+			padding: 2rem 5rem 5rem 2rem;
+		}
 	}
 
 	#roadmap {
-		padding: 5rem;
+		padding: 5rem 0 5rem 0;
 		@media (max-width: 1024px) {
 			padding: 2rem;
+		}
+		@media (max-width: 1920px) {
+			padding: 5rem 2rem 5rem 2rem;
 		}
 	}
 
 	#about-us {
-		margin: 5rem;
+		margin: 2rem 5rem 5rem 2rem;
 		p {
 			max-width: 768px;
 		}
