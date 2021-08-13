@@ -66,7 +66,7 @@
 		}
 
 		p {
-			color: #f8f8f8;
+			color: #ffffffdc;
 			font-size: 0.85rem;
 			max-width: 430px;
 			line-height: 1.35em;
