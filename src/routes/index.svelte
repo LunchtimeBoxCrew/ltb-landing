@@ -3,7 +3,7 @@
 	import Link from '$lib/Link.svelte';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
-	import * as content from '../content';
+	import Content from '../content/Content.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
 
 	function joinNumber() {
@@ -47,7 +47,7 @@
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
 		<div class="capwidth">
-			{@html content.intro}
+			<Content file="intro" />
 		</div>
 	</section>
 
