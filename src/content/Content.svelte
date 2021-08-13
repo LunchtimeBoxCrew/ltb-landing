@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-	import * as content from './';
+	import * as content from '.';
 </script>
 
 <script lang="ts">
