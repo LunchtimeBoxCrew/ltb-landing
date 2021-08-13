@@ -1,8 +1,20 @@
-# ltb-landing
+# LTB Landing Page
 
-Moin ihr Entwickler:innen, heute zeig ich euch wie ihr in 4 kleinen Schritten dieses Repo gebändigt bekommt:
+<div align="center">
+
+<img src="static/favicon/favicon.svg" width="30%"/>
+
+<a href="https://lunchtimeboxcrew.github.io/ltb-landing/"><h2 align="center">LTB LandingPage</h2></a>
+
+  <p align="center">
+    Landing Page für unser LunchtimeBox Projekt
+  </p>
+
+</div>
 
 ## Zum Entwickeln
+
+Moin ihr Entwickler:innen, heute zeig ich euch wie ihr in 4 kleinen Schritten dieses Repo gebändigt bekommt:
 
 ### 1. Setup der Entwicklungsumgebung.
 
