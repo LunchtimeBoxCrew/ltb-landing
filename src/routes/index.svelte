@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { phone as phoneSrc } from '$lib/images/stock';
+	import Link from '$lib/Link.svelte';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
+	import * as content from '../content';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
-	import Link from '$lib/Link.svelte';
-	import { phone as phoneSrc } from '$lib/images/stock';
 
 	function joinNumber() {
 		return 'tel:' + ['+49', '2261', '0000000000'].join('');
@@ -46,23 +47,7 @@
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
 		<div class="capwidth">
-			<h2>LunchtimeBox</h2>
-			<p>
-				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und
-				Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen
-				Lunchtimern zu kommunizieren.<br /><br />
-				Für viele Menüservicenutzer stellt der Lieferant den einzigen Kontakt dar. Diese sehen die soziale
-				Interaktion als wichtigen Teil ihrer Arbeit, sind aber durch enge Zeitpläne nicht in der Lage,
-				dieses Bedürfnis hinreichend zu bedienen.
-
-				<br /><br />Die LunchtimeBox verbindet erstmalig zwei grundlegende Bedürfnisse: Nahrung und
-				soziale Interaktion.
-				<br /><br />Durch Videotelefonie können die Nutzer untereinander und mit ihren Angehörigen
-				in Kontakt treten. Mit speziellem, auf die Nutzergruppe zugeschnittenen Design, bauen wir
-				eine Brücke zwischen den Möglichkeiten unserer digitalen Realität und ihren Bedürfnissen. Im
-				Verlaufe des Projektes entwickeln und testen wir die Idee in enger Zusammenarbeit mit
-				unseren Partnern (Malteser) und der Zielgruppe iterativ weiter.
-			</p>
+			{@html content.intro}
 		</div>
 	</section>
 
