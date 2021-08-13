@@ -282,7 +282,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding: 8rem 0 4rem 0;
+			padding: 8rem 0rem 4rem 0rem;
 			@media (max-width: 1024px) {
 				flex-direction: column;
 				padding: 4rem 0 4rem 0;
