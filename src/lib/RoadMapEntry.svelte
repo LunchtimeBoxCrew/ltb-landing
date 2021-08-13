@@ -44,6 +44,7 @@
         height: 10rem;
         border-radius: 13px;
         transition: border-radius 0.5s;
+        background: $green;
         &.opened {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
@@ -51,6 +52,9 @@
     }
     img {
         width: 100%;
+        filter: grayscale(1);
+        opacity: 0.5;
+        
     }
     .header {
         position: absolute;
