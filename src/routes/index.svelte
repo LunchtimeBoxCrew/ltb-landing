@@ -1,16 +1,9 @@
 <script lang="ts">
+	import ContactSection from '$lib/layouts/ContactSection.svelte';
+	import Link from '$lib/Link.svelte';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
-	import Link from '$lib/Link.svelte';
-	import { phone as phoneSrc } from '$lib/images/stock';
-
-	function joinNumber() {
-		return 'tel:' + ['+49', '2261', '0000000000'].join('');
-	}
-	function joinMail() {
-		return 'mailto:' + ['hello', '@', 'lunchtimebox.de'].join('');
-	}
 </script>
 
 <header>
@@ -128,29 +121,8 @@
 			<Person name="max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
-	<section id="contact">
-		<h1 style="margin-bottom: 2rem">Kontaktiere uns</h1>
-		<div id="infowrapper">
-			<div id="infos">
-				<p id="text" style="text-align:center; margin-top: 2rem">
-					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre
-					Unterstützung. Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder
-					<b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung.
-				</p>
 
-				<br />
-				<br />
-
-				<Link --margin="0.7rem 0" link={joinMail} style="dark" icon="letter">
-					<p>Schick uns eine Mail</p>
-				</Link>
-				<Link --margin="0.7rem 0" link={joinNumber} style="dark" icon="phone" click={false}>
-					<p>Oder ruf uns einfach an</p>
-				</Link>
-			</div>
-			<img srcset={phoneSrc} alt="An old phone" />
-		</div>
-	</section>
+	<ContactSection />
 </main>
 
 <style lang="scss">
@@ -291,50 +263,6 @@
 		}
 		@media (min-width: 580px) {
 			padding: 5rem;
-		}
-	}
-
-	#contact {
-		margin: 15rem 0;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-
-		#infowrapper {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			background: $light-gray;
-		}
-		img {
-			width: 50%;
-		}
-		#infos {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			width: 50%;
-		}
-		#text {
-			width: 50%;
-			text-align: left;
-		}
-		h1 {
-			margin: 2rem;
-		}
-
-		@media (max-width: 1024px) {
-			#infowrapper {
-				flex-direction: column;
-			}
-			#infos {
-				width: 100%;
-			}
-
-			img {
-				width: 100%;
-			}
 		}
 	}
 
