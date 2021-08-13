@@ -2,10 +2,8 @@
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
-	import Button from '$lib/Button.svelte';
-	import Icon from '$lib/Icon.svelte';
+	import Link from '$lib/Link.svelte';
 	import { phone as phoneSrc } from '$lib/images/stock';
-	import { letter as letterSvg } from '$lib/images/icons';
 
 	function joinNumber() {
 		return 'tel:' + ['+49', '2261', '0000000000'].join('');
@@ -38,12 +36,9 @@
 						Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
 					</p>
 				</div>
-				<a href="#contact" class="button">
-					<div class="content">
-						<p>Kontaktiere uns</p>
-						<Icon name="letter" --fill="darkgray" />
-					</div>
-				</a>
+				<Link link="#contact" icon="letter" --min-width="160px">
+					<p>Kontaktiere uns</p>
+				</Link>
 			</div>
 		</div>
 	</section>
@@ -146,12 +141,12 @@
 				<br />
 				<br />
 
-				<Button --margin="0.7rem 0" link={joinMail} style="dark" icon="letter">
-					Schick uns eine Mail
-				</Button>
-				<Button --margin="0.7rem 0" link={joinNumber} style="dark" icon="letter" click={false}>
-					Oder ruf uns einfach an
-				</Button>
+				<Link --margin="0.7rem 0" link={joinMail} style="dark" icon="letter">
+					<p>Schick uns eine Mail</p>
+				</Link>
+				<Link --margin="0.7rem 0" link={joinNumber} style="dark" icon="phone" click={false}>
+					<p>Oder ruf uns einfach an</p>
+				</Link>
 			</div>
 			<img srcset={phoneSrc} alt="An old phone" />
 		</div>
@@ -202,7 +197,7 @@
 		}
 	}
 
-	a.button {
+	a.Link {
 		all: unset;
 		background-color: white;
 		border: none;
@@ -298,7 +293,7 @@
 	}
 
 	#explainer {
-		padding: 5rem;
+		padding: 5rem 0 5rem 0;
 		font-weight: 300;
 		p {
 			max-width: 768px;
@@ -306,17 +301,23 @@
 		@media (max-width: 1024px) {
 			padding: 4rem 2rem;
 		}
+		@media (max-width: 1920px) {
+			padding: 2rem 5rem 5rem 2rem;
+		}
 	}
 
 	#roadmap {
-		padding: 5rem;
+		padding: 5rem 0 5rem 0;
 		@media (max-width: 1024px) {
 			padding: 2rem;
+		}
+		@media (max-width: 1920px) {
+			padding: 5rem 2rem 5rem 2rem;
 		}
 	}
 
 	#about-us {
-		margin: 5rem;
+		margin: 2rem 5rem 5rem 2rem;
 		p {
 			max-width: 768px;
 		}
@@ -366,7 +367,7 @@
 			width: 50%;
 			text-align: left;
 		}
-		.button-content {
+		.Link-content {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
