@@ -12,11 +12,13 @@
 </span>
 
 <style lang="scss">
+	span {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: var(--margin);
+	}
 	span > :global(svg > *) {
 		fill: var(--fill);
-	}
-
-	span {
-		margin: var(--margin);
 	}
 </style>
