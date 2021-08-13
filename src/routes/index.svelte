@@ -112,13 +112,13 @@
 
 	<section id="team">
 		<div id="teambox">
-			<Person name="Majid" description="packt an, zieht durch" />
-			<Person name="Timo" description="der perfektionistische Informatiker" />
-			<Person name="Lara" description="unsere kreative Powereinheit" />
-			<Person name="Dario" description="unsere Emotionale Intelligenz" />
-			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" />
-			<Person name="Fabian" description="&quot;MacMakeThings&quot;" />
-			<Person name="Max" description="unser kreativer Programmierer" />
+			<Person name="majid" description="packt an, zieht durch" />
+			<Person name="timo" description="der perfektionistische Informatiker" />
+			<Person name="lara" description="unsere kreative Powereinheit" />
+			<Person name="dario" description="unsere Emotionale Intelligenz" />
+			<Person name="jonas" description="der immer noch zwei Schritte weiterdenkt" />
+			<Person name="fabian" description="&quot;MacMakeThings&quot;" />
+			<Person name="max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
 
@@ -146,12 +146,6 @@
 		}
 	}
 
-	p.text {
-		padding: 0;
-		margin: 0;
-		font-weight: 300;
-	}
-
 	header {
 		z-index: 2;
 		right: 10px;
@@ -166,47 +160,6 @@
 		a:hover {
 			transition: all 1s;
 			text-decoration: underline;
-		}
-	}
-
-	a.Link {
-		all: unset;
-		background-color: white;
-		border: none;
-		border-radius: 0.5rem;
-		padding: 1rem 1.2rem;
-		cursor: pointer;
-
-		&.dark {
-			background-color: rgb(24, 24, 24);
-			.content {
-				color: white;
-			}
-		}
-		@media (max-width: 1024px) {
-			width: 100%;
-		}
-		position: relative;
-		&::after {
-			position: absolute;
-			content: '"Klick"';
-			top: -2rem;
-			right: -1rem;
-			color: white;
-			font-size: 1rem;
-			transform: rotate(10deg);
-			opacity: 0.6;
-		}
-		.content {
-			color: darkgray;
-			font-size: 1rem;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			p {
-				margin-right: 1rem;
-			}
 		}
 	}
 
