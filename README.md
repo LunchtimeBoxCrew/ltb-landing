@@ -14,13 +14,13 @@
 
 ## Zum Entwickeln
 
-Moin ihr Entwickler:innen, heute zeig ich euch wie ihr in 4 kleinen Schritten dieses Repo gebändigt bekommt:
+Moin ihr Entwickler:innen, heute zeig ich euch wie ihr in _4_ Schritten dieses Repo gebändigt bekommt:
 
 ### 1. Setup der Entwicklungsumgebung.
 
 **A.** Als aller erstes braucht ihr [NodeJS](https://nodejs.org/en/).
 
-**B.** Als package manager benutzen wir [pnpm](https://pnpm.io/), um diesen zu installieren führt ihr diesen command aus:
+**B.** Als Package Manager benutzen wir [pnpm](https://pnpm.io/), um diesen zu installieren führt ihr diesen command aus:
 
 ```bash
 npm i -g pnpm
@@ -28,7 +28,7 @@ npm i -g pnpm
 
 ### 2. Klonen vom Projekt
 
-**A.** Das Repo klonen tut ihr mit diesem Befehl
+**A.** Das Repo klont ihr mit diesem Befehl
 
 ```bash
 git clone git@github.com:LunchtimeBoxCrew/ltb-landing.git
@@ -69,11 +69,11 @@ pnpm dev
 
 Falls ihr jetzt eine _wunderschöne_ Website seht:
 
-> Tadaaa 🎉🎉🎉 Ihr habt jetzt offiziel das ltb-landing Repository gebändigt.
+> TADAAA 🎉🎉🎉 Ihr habt jetzt offiziel das ltb-landing Repository gebändigt.
 
 falls das nicht der Fall ist:
 
-> Tadaaa, frag einen von den anderen Membern um Hilfe 🤔
+> TADAaa, frag einen von den anderen Membern um Hilfe 🤔
 
 ## Building
 
