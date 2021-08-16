@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { PeopleType } from '../lib/images/people/ProfileImage.svelte';
-	import ProfileImage from '../lib/images/people/ProfileImage.svelte';
+	import type { PeopleType } from './images/people/ProfileImage.svelte';
+	import ProfileImage from './images/people/ProfileImage.svelte';
 
 	export let name: PeopleType;
 
