@@ -58,6 +58,9 @@ import ContactSection from '$lib/layouts/ContactSection.svelte';
 		<RoadMapEntry showDesc={false} name="Project Make 2" date="2021" image="project">
 			<Content file="projectmake2" />
 		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="KickStart@TH Köln" date="2021" image="kickstart">
+			<Content file="kickstart" />
+		</RoadMapEntry>
 		<RoadMapEntry showDesc={false} name="Project Cologne" date="2021" image="acceleration">
 			<Content file="projectcologne" />
 		</RoadMapEntry>
