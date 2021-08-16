@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import * as StockImages from './images/stock';
+	import Icon from './Icon.svelte';
 
 	export let name: string;
 	export let date: string;
@@ -17,8 +18,13 @@
 	<div class="wrapper" class:opened={showDesc} on:click={switchDesc}>
 		<img srcset={StockImages[image]} alt="descriptive image of {name}" />
 		<div class="header">
-			<h1 class="heading">{name}</h1>
-			<p class="date">{date}</p>
+			<div class='horizontal'>
+				<h1 class="heading">{name}</h1>
+				<p class="date">{date}</p>
+			</div>
+			<div class='iconwrapper' class:opened={showDesc}>
+				<Icon name='expand' --fill='#FFF' --scale='2' />
+			</div>
 		</div>
 	</div>
 	{#if showDesc}
@@ -38,6 +44,8 @@
 
 		background-color: #f8f8f8;
 		margin-bottom: 4rem;
+
+		
 	}
 	.wrapper {
 		cursor: pointer;
@@ -45,12 +53,28 @@
 		overflow: hidden;
 		height: 10rem;
 		border-radius: 13px;
-		transition: border-radius 0.5s;
+		transition: border-radius 0.5s, transform .2s ease-in-out;
 		background-color: $green;
 		&.opened {
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
+			.iconwrapper {
+				transform: scaleY(-1);
+			}
 		}
+
+		&:hover {
+			transform: scale(1.01);	
+		}
+	}
+
+	.iconwrapper {
+		transition: transform .2s ease-in-out;
+	}
+	.horizontal {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 	img {
 		width: 100%;
@@ -62,7 +86,7 @@
 	.header {
 		position: absolute;
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		width: 100%;
 		height: 100%;
 		justify-content: space-between;
