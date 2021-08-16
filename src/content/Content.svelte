@@ -7,11 +7,11 @@
 </script>
 
 <div class="content-raw">
-	{@html content[file.toLowerCase()]}
+	<svelte:component this={content[file.toLowerCase()]} />
 </div>
 
 <style lang="scss">
-		@import '../styles/index.scss';
+	@import '../styles/index.scss';
 
 	.content-raw {
 		& :global(p) {
