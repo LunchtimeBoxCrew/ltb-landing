@@ -12,7 +12,7 @@
 	}
 </script>
 
-<a on:click={setHref} href="_blank" class:dark={style === 'dark'} class:click>
+<a on:click={setHref} href="#empty" class:dark={style === 'dark'} class:click>
 	<slot />
 	{#if icon}
 		<!-- THe 3px margin centers the icon a bit better -->
