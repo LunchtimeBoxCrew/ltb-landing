@@ -6,24 +6,9 @@ declare module '*srcset' {
 }
 
 declare module '*.md' {
-	// "unknown" would be more detailed depends on how you structure frontmatter
-	const attributes: Record<string, unknown>;
+	import { SvelteComponent } from 'svelte';
 
-	// When "Mode.TOC" is requested
-	const toc: { level: string; content: string }[];
-
-	// When "Mode.HTML" is requested
-	const html: string;
-
-	// When "Mode.React" is requested. VFC could take a generic like React.VFC<{ MyComponent: TypeOfMyComponent }>
-	import React from 'react';
-	// When "Mode.Vue" is requested
-	import { Component, ComponentOptions } from 'vue';
-	const ReactComponent: React.VFC;
-
-	const VueComponent: ComponentOptions;
-	const VueComponentWith: (components: Record<string, Component>) => ComponentOptions;
-
+	const component: SvelteComponent;
 	// Modify below per your usage
-	export { attributes, toc, html, ReactComponent, VueComponent, VueComponentWith };
+	export default component;
 }
