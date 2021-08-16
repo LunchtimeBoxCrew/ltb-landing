@@ -1,9 +1,9 @@
 <script lang="ts">
+	import Content from 'content/Content.svelte';
 	import ContactSection from 'lib/layouts/ContactSection.svelte';
 	import Link from 'lib/Link.svelte';
 	import Person from 'lib/Person.svelte';
 	import RoadMapEntry from 'lib/RoadMapEntry.svelte';
-	import Content from 'content/Content.svelte';
 </script>
 
 <header>
@@ -70,7 +70,7 @@
 		</div>
 	</section>
 
-	<section id="team">
+	<section id="team" class="dark">
 		<div class="capwidth">
 			<Person name="Majid" description="packt an, zieht durch" />
 			<Person name="Timo" description="der perfektionistische Informatiker" />
