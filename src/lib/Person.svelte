@@ -101,6 +101,11 @@
 				width: 50%;
 				overflow: hidden;
 				border-radius: 1rem;
+
+				> :global(img) {
+					height: 60%;
+					object-fit: cover;
+				}
 			}
 			:global(img) {
 				display: block;
