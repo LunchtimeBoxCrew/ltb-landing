@@ -1,8 +1,9 @@
 <script lang="ts">
-	import ContactSection from '$lib/layouts/ContactSection.svelte';
-	import Link from '$lib/Link.svelte';
-	import Person from '$lib/Person.svelte';
-	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
+	import ContactSection from 'lib/layouts/ContactSection.svelte';
+	import Link from 'lib/Link.svelte';
+	import Person from 'lib/Person.svelte';
+	import RoadMapEntry from 'lib/RoadMapEntry.svelte';
+	import Content from 'content/Content.svelte';
 </script>
 
 <header>
@@ -32,66 +33,30 @@
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
 		<div class="capwidth">
-			<h2>LunchtimeBox</h2>
-			<p>
-				Die Lunchtimebox ist eine Lieferbox für Essen auf Rädern, ausgestattet mit Kameras und
-				Bildschirm, um während des Essens über Videokommunikation mit Angehörigen oder anderen
-				Lunchtimern zu kommunizieren.<br /><br />
-				Für viele Menüservicenutzer stellt der Lieferant den einzigen Kontakt dar. Diese sehen die soziale
-				Interaktion als wichtigen Teil ihrer Arbeit, sind aber durch enge Zeitpläne nicht in der Lage,
-				dieses Bedürfnis hinreichend zu bedienen.
-
-				<br /><br />Die LunchtimeBox verbindet erstmalig zwei grundlegende Bedürfnisse: Nahrung und
-				soziale Interaktion.
-				<br /><br />Durch Videotelefonie können die Nutzer untereinander und mit ihren Angehörigen
-				in Kontakt treten. Mit speziellem, auf die Nutzergruppe zugeschnittenen Design, bauen wir
-				eine Brücke zwischen den Möglichkeiten unserer digitalen Realität und ihren Bedürfnissen. Im
-				Verlaufe des Projektes entwickeln und testen wir die Idee in enger Zusammenarbeit mit
-				unseren Partnern (Malteser) und der Zielgruppe iterativ weiter.
-			</p>
+			<Content file="idea" />
 		</div>
 	</section>
 
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
-		<RoadMapEntry
-			showDesc={true}
-			name="Idee"
-			date="2019"
-			image="ideation"
-			description="Wir sind eine Studierendengruppe an der Technischen Hochschule Köln im Rahmen des Studiengangs Code and Context und bestehen aus sieben Studierenden.
-
-			Die Vision, welche wir als Team verfolgen ist, Menschen die Möglichkeit zu geben, sich wieder als Teil der Gesellschaft zu fühlen.
-			
-			Unsere Vision möchten wir mithilfe der LunchtimeBox realisieren. Die Idee bei der LunchtimeBox ist, eine Essenstransportbox mit einem Bildschirm und Videokommunikationstechnik auszustatten. Unser Ziel dabei ist es, die Technik so einfach wie möglich zu gestalten, um den Nutzer:innen höheren Alters die Möglichkeit zu bieten mit Angehörigen oder anderen Nutzer:innen der Box während des Mittagessens zu kommunizieren. Damit möchten wir zwei Grundbedürfnisse zusammenführen. Zum einen die Nahrungsaufnahme und zum anderen die soziale Interaktion."
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Entstehung"
-			date="2019"
-			image="ideation"
-			description="Um den Hintergrund unserer Idee nachvollziehen zu können müssen wir einen Schritt zurückgehen. Ende 2019 im Rahmen des Kurses Design Thinking hatten wir durch unsere Partner Malteser, die Möglichkeit uns mit ihrem Menüservice auseinanderzusetzen.
-
-			Ziel war es sich den Service anzuschauen und herauszubekommen, wieso dieser Service in Anspruch genommen wird. Dabei wollten wir herausfinden, was diesen Menschen an dem Service gefällt, beziehungsweise was ihnen nicht gefällt. Dafür sind wir in unserer Gruppe nach Ochtrup gereist und haben dort Interviews mit einigen Nutzer:innen und deren Angehörigen geführt. Des Weiteren haben wir einen Auslieferungsfahrer bei seiner täglichen Tour begleitet, um den Prozess besser zu verstehen.
-			
-			Nach Auswertung unserer gesammelten Erkenntnisse sind wir zu der These gekommen, dass sich viele dieser Menschen nicht einen besseren Service wünschen, sondern einfach mehr Kontakt zu anderen Menschen, weil viele von ihnen sehr isoliert leben und die Fahrer:innen meistens die einzigen sozialen Kontakte sind.
-			
-			Wir haben uns dann als Team zusammen Gedanken über eine Lösung gemacht. Dabei ist die Idee der LunchtimeBox entstanden."
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Project Make 1"
-			date="2020"
-			image="project"
-			description="Im Project Make 1 bekamen wir als Team nun die Möglichkeit, an der Idee der LunchtimeBox zu arbeiten und einen ersten Protoypen zu erschaffen"
-		/>
-		<RoadMapEntry
-			showDesc={false}
-			name="Kickstart"
-			date="2021"
-			image="acceleration"
-			description="Im Verlauf des Project Make 1 konnten wir das Team des Kickstart@TH Köln mit unserer Idee überzeugen und eine Förderung von 7.500€ für die Weiterentwicklung unseres Prototypen erhalten."
-		/>
+		<RoadMapEntry showDesc={false} name="Entstehung" date="2019" image="ideation">
+			<Content file="formation" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Erster Prototyp" date="2019" image="prototype">
+			<Content file="firstprototype" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Project Make 1" date="2020" image="project">
+			<Content file="projectmake1" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Project Make 2" date="2021" image="project">
+			<Content file="projectmake2" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="KickStart@TH Köln" date="2021" image="kickstart">
+			<Content file="kickstart" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Project Cologne" date="2021" image="acceleration">
+			<Content file="projectcologne" />
+		</RoadMapEntry>
 	</section>
 
 	<section id="about-us" class="dark">
@@ -107,17 +72,21 @@
 
 	<section id="team">
 		<div class="capwidth">
-			<Person name="majid" description="packt an, zieht durch" />
-			<Person name="timo" description="der perfektionistische Informatiker" />
-			<Person name="lara" description="unsere kreative Powereinheit" />
-			<Person name="dario" description="unsere Emotionale Intelligenz" />
-			<Person name="jonas" description="der immer noch zwei Schritte weiterdenkt" />
-			<Person name="fabian" description="&quot;MacMakeThings&quot;" />
-			<Person name="max" description="unser kreativer Programmierer" />
+			<Person name="Majid" description="packt an, zieht durch" />
+			<Person name="Timo" description="der perfektionistische Informatiker" />
+			<Person name="Lara" description="unsere kreative Powereinheit" />
+			<Person name="Dario" description="unsere Emotionale Intelligenz" />
+			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" />
+			<Person name="Fabian" description="&quot;MacMakeThings&quot;" />
+			<Person name="Max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
 
-	<ContactSection />
+	<section id="contact">
+		<div class="capwidth">
+			<ContactSection />
+		</div>
+	</section>
 </main>
 
 <style lang="scss">
@@ -151,9 +120,17 @@
 			color: white;
 			padding: 1rem;
 			text-decoration: none;
+			@media (max-width: 1024px) {
+				padding: 0rem;
+				margin-right: 1rem;
+			}
 		}
 		a:hover {
 			text-decoration: underline;
+		}
+
+		@media (max-width: 1024px) {
+			left: 0;
 		}
 	}
 
@@ -170,6 +147,7 @@
 
 		background-image: url(./HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true);
 		background-size: cover;
+		background-position: 30% 20%;
 
 		h1 {
 			font-size: 8rem;
@@ -178,8 +156,10 @@
 			margin-top: 8rem;
 			margin-bottom: 4rem;
 			@media (max-width: 1024px) {
-				font-size: 4rem;
-				line-height: 4rem;
+				font-size: 2.3rem;
+				line-height: 2.3rem;
+				margin-top: 5rem;
+				margin-bottom: 1.5rem;
 			}
 		}
 
@@ -195,9 +175,10 @@
 
 			> p {
 				font-size: 1.4rem;
+				font-weight: 200;
 				@media (max-width: 1024px) {
-					margin-bottom: 4rem;
-					font-size: 1.2rem;
+					margin-bottom: 3.5rem;
+					font-size: 1rem;
 				}
 			}
 		}
@@ -205,7 +186,7 @@
 
 	#explainer {
 		font-weight: 300;
-		p {
+		:global(p) {
 			max-width: 768px;
 		}
 	}
@@ -219,6 +200,14 @@
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
+	}
+
+	#contact {
+		background: $green;
+		> div {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	section.dark {
