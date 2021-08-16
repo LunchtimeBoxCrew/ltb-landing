@@ -1,6 +1,3 @@
-Wir sind eine Studierendengruppe an der Technischen Hochschule Köln im Rahmen des Studiengangs Code and Context und bestehen aus sieben Studierenden.
-
-
 Die Vision, welche wir als Team verfolgen ist, Menschen die Möglichkeit zu geben, sich wieder als Teil der Gesellschaft zu fühlen.
 
 
