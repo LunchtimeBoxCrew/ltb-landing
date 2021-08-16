@@ -31,3 +31,7 @@ Abschluss des Projektes war ein finaler Pitch Wettbewerb an dem alle Teams teiln
 Hier sind alle drei Plätze angezeigt:
 
 [Telekom Silver Ager Challenge 2021](https://projectcologne.de/telekom-silver-ager-challenge)
+
+Das Project Cologne Team hat zum Finale einen Blogartikel geschrieben, den wir hier gerne verlinken:
+
+[Blogartikel des Project Cologne Teams zum Pitch Finale](https://www.notion.so/Doku-c3704462bb9d48529a696ea093f4ed51#cd72b4f3893748a8802f71324008a80a)
