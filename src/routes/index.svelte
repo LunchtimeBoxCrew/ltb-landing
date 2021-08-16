@@ -1,9 +1,9 @@
 <script lang="ts">
-	import Content from 'content/Content.svelte';
-	import ContactSection from 'lib/layouts/ContactSection.svelte';
-	import Link from 'lib/Link.svelte';
-	import Person from 'lib/Person.svelte';
-	import RoadMapEntry from 'lib/RoadMapEntry.svelte';
+	import Content from '../content/Content.svelte';
+	import ContactSection from '$lib/layouts/ContactSection.svelte';
+	import Link from '$lib/Link.svelte';
+	import Person from '$lib/Person.svelte';
+	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 </script>
 
 <header>

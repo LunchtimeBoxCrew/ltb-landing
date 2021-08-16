@@ -2,8 +2,8 @@ import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import { imagetools } from 'vite-imagetools';
 import { mdsvex } from 'mdsvex';
-import tsconfigPaths from 'vite-tsconfig-paths';
 
+const { BASE_PATH } = process.env;
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -26,12 +26,14 @@ const config = {
 			hmr: {
 				port: 3000
 			},
-			plugins: [imagetools({ force: true }), tsconfigPaths()]
-		}
-		// paths: {
-		// 	assets: '/ltb-landing',
-		// 	base: '/ltb-landing'
-		// }
+			plugins: [imagetools({ force: true })]
+		},
+		paths: BASE_PATH
+			? {
+					assets: BASE_PATH,
+					base: BASE_PATH.includes('localhost') ? '' : '/ltb-landing'
+			  }
+			: {}
 	}
 };
 
