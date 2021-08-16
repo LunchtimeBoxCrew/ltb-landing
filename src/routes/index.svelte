@@ -135,6 +135,7 @@
 
 		background-image: url(./HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true);
 		background-size: cover;
+		background-position: 30% 20%;
 
 		h1 {
 			font-size: 8rem;
