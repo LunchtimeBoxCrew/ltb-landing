@@ -35,7 +35,7 @@
 	.entry {
 		border-radius: 1rem;
 		/* width: 50%; */
-		max-width: 768px;
+
 		background-color: #f8f8f8;
 		margin-bottom: 4rem;
 	}
