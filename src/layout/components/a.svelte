@@ -7,3 +7,15 @@
 </script>
 
 <a {href} target="_blank"><slot /></a>
+
+<style lang="scss">
+	@import '../../styles';
+
+	a {
+		color: $green;
+		text-decoration: none;
+		&:hover {
+			color: $font-primary;
+		}
+	}
+</style>
