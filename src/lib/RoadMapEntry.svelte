@@ -85,9 +85,6 @@
 	.desc {
 		padding: 2.3rem 1.7rem;
 	}
-	.gray {
-		background-color: $light-gray;
-	}
 
 	@media (max-width: 768px) {
 		.entry {

@@ -82,7 +82,11 @@
 		</div>
 	</section>
 
-	<ContactSection />
+	<section id="contact">
+		<div class="capwidth">
+			<ContactSection />
+		</div>
+	</section>
 </main>
 
 <style lang="scss">
@@ -116,9 +120,17 @@
 			color: white;
 			padding: 1rem;
 			text-decoration: none;
+			@media (max-width: 1024px) {
+				padding: 0rem;
+				margin-right: 1rem;
+			}
 		}
 		a:hover {
 			text-decoration: underline;
+		}
+
+		@media (max-width: 1024px) {
+			left: 0;
 		}
 	}
 
@@ -144,8 +156,10 @@
 			margin-top: 8rem;
 			margin-bottom: 4rem;
 			@media (max-width: 1024px) {
-				font-size: 4rem;
-				line-height: 4rem;
+				font-size: 2.3rem;
+				line-height: 2.3rem;
+				margin-top: 5rem;
+				margin-bottom: 1.5rem;
 			}
 		}
 
@@ -161,9 +175,10 @@
 
 			> p {
 				font-size: 1.4rem;
+				font-weight: 200;
 				@media (max-width: 1024px) {
-					margin-bottom: 4rem;
-					font-size: 1.2rem;
+					margin-bottom: 3.5rem;
+					font-size: 1rem;
 				}
 			}
 		}
@@ -185,6 +200,14 @@
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
+	}
+
+	#contact {
+		background: $green;
+		> div {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	section.dark {

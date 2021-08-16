@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Icon from './Icon.svelte';
 	import type { IconType } from './Icon.svelte';
+	import Icon from './Icon.svelte';
 
 	export let link: string | (() => string);
 	export let style: 'dark' | 'light' = 'light';
@@ -12,7 +12,7 @@
 	}
 </script>
 
-<a on:click={setHref} href="#" class:dark={style === 'dark'} class:click>
+<a on:click={setHref} href="_blank" class:dark={style === 'dark'} class:click>
 	<slot />
 	{#if icon}
 		<!-- THe 3px margin centers the icon a bit better -->
@@ -43,6 +43,11 @@
 		align-items: center;
 		justify-content: center;
 
+		@media (max-width: 1024px) {
+			padding: 0.7rem 1rem;
+			font-size: 0.9rem;
+		}
+
 		&.dark {
 			background-color: $green;
 			:global(p) {
@@ -53,10 +58,6 @@
 				color: black;
 			}
 		}
-
-		// @media (max-width: 1024px) {
-		// 	width: 100%;
-		// }
 
 		&.click {
 			&::before {
