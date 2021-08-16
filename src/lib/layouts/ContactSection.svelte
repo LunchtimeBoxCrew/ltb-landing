@@ -6,7 +6,7 @@
 	const mail = () => 'mailto:' + ['hello', '@', 'lunchtimebox.de'].join('');
 </script>
 
-<section>
+<section id="contact">
 	<div class="left">
 		<h2>Kontaktiere uns</h2>
 		<p>
