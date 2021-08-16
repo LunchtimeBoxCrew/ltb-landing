@@ -21,4 +21,9 @@
 	span > :global(svg > *) {
 		fill: var(--fill);
 	}
+
+	span > :global(svg) {
+		height: calc(24px * var(--scale, 1));
+		width: calc(24px * var(--scale, 1));
+	}
 </style>
