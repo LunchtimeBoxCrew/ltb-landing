@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+	import * as StockImages from './images/stock';
+
 	export let name: string;
 	export let date: string;
-	export let description: string;
 	export let image: string;
 	export let showDesc: boolean;
-
-	import * as StockImages from './images/stock';
 
 	function switchDesc() {
 		console.log('desc was ' + showDesc);
@@ -15,7 +14,7 @@
 </script>
 
 <div class="entry">
-	<div class="wrapper" on:click={switchDesc} class:opened={showDesc}>
+	<div class="wrapper" class:opened={showDesc} on:click={switchDesc}>
 		<img srcset={StockImages[image]} alt="descriptive image of {name}" />
 		<div class="header">
 			<h1 class="heading">{name}</h1>
@@ -24,7 +23,9 @@
 	</div>
 	{#if showDesc}
 		<div transition:slide>
-			<p class="desc">{description}</p>
+			<p class="desc">
+				<slot />
+			</p>
 		</div>
 	{/if}
 </div>
@@ -34,7 +35,7 @@
 	.entry {
 		border-radius: 1rem;
 		/* width: 50%; */
-		max-width: 768px;
+
 		background-color: #f8f8f8;
 		margin-bottom: 4rem;
 	}
@@ -45,7 +46,7 @@
 		height: 10rem;
 		border-radius: 13px;
 		transition: border-radius 0.5s;
-		background: $green;
+		background-color: $green;
 		&.opened {
 			border-bottom-left-radius: 0;
 			border-bottom-right-radius: 0;
@@ -53,6 +54,8 @@
 	}
 	img {
 		width: 100%;
+		height: 100%;
+		object-fit: cover;
 		filter: grayscale(1);
 		opacity: 0.5;
 	}

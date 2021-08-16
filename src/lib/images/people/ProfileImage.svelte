@@ -7,4 +7,4 @@
 	export let name: PeopleType;
 </script>
 
-<img srcset={PeopleImages[name.toLowerCase()]} type="image/webp" alt={`person ${name}`} />
+<img srcset={PeopleImages[name]} type="image/webp" alt={`person ${name}`} />
