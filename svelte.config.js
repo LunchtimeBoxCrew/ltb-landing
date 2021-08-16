@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import { imagetools } from 'vite-imagetools';
 import { mdsvex } from 'mdsvex';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -25,7 +26,7 @@ const config = {
 			hmr: {
 				port: 3000
 			},
-			plugins: [imagetools({ force: true })]
+			plugins: [imagetools({ force: true }), tsconfigPaths()]
 		}
 		// paths: {
 		// 	assets: '/ltb-landing',
