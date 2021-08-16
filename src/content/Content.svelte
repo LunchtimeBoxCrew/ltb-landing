@@ -25,7 +25,7 @@
 			text-decoration: none;
 
 			&:hover {
-				color: $lightgreen;
+				color: $font-primary;
 			}
 		}
 	}
