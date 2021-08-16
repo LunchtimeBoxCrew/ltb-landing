@@ -78,7 +78,6 @@
 		.modal {
 			position: relative;
 			display: flex;
-			border: 1px solid #e1e3e6;
 			border-radius: 1rem;
 			background: rgb(230, 232, 233);
 			width: 100%;
