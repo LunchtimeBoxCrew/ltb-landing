@@ -3,7 +3,6 @@
 	import Link from '$lib/Link.svelte';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
-	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
 </script>
 
 <header>
@@ -14,21 +13,15 @@
 <main>
 	<!-- Intro Section -->
 	<section id="intro">
-		<img srcset={HeroHeader} alt="smiling man sitting infront of desk with tablet" />
-
 		<div class="capwidth">
-			<div id="heading" class="white">
-				<h1>
-					<b>Soziale Teilhabe</b><br />
-					mit einem Klick<b>.</b>
-				</h1>
-			</div>
-			<div id="footer">
-				<div id="subtextwrapper">
-					<p class="white">
-						Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
-					</p>
-				</div>
+			<h1 class="white">
+				<b>Soziale Teilhabe</b><br />
+				mit einem Klick<b>.</b>
+			</h1>
+			<div class="footer">
+				<p class="white">
+					Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
+				</p>
 				<Link link="#contact" icon="letter" --min-width="160px">
 					<p>Kontaktiere uns</p>
 				</Link>
@@ -101,17 +94,19 @@
 		/>
 	</section>
 
-	<section id="about-us" class="capwidth">
-		<h2>Team</h2>
-		<p>
-			Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
-			Design, Entrepeneurship und dem gemeinsamen Wunsch diese Fähigkeiten in einem sozialen Kontext
-			einzusetzen.
-		</p>
+	<section id="about-us" class="dark">
+		<div class="capwidth">
+			<h2>Team</h2>
+			<p>
+				Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
+				Design, Entrepeneurship und dem gemeinsamen Wunsch diese Fähigkeiten in einem sozialen
+				Kontext einzusetzen.
+			</p>
+		</div>
 	</section>
 
 	<section id="team">
-		<div id="teambox">
+		<div class="capwidth">
 			<Person name="majid" description="packt an, zieht durch" />
 			<Person name="timo" description="der perfektionistische Informatiker" />
 			<Person name="lara" description="unsere kreative Powereinheit" />
@@ -133,7 +128,7 @@
 	}
 
 	.capwidth {
-		max-width: 1920px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
@@ -152,119 +147,78 @@
 		position: absolute;
 		padding: 2rem;
 		> a {
-			text-decoration: none;
 			font-weight: 200;
 			color: white;
 			padding: 1rem;
+			text-decoration: none;
 		}
 		a:hover {
-			transition: all 1s;
 			text-decoration: underline;
+		}
+	}
+
+	section {
+		padding: 4rem 0rem;
+		@media (max-width: 1300px) {
+			padding: 4rem 2rem;
 		}
 	}
 
 	#intro {
 		position: relative;
+		padding-bottom: 4rem;
 
-		> .capwidth {
-			padding: 5rem;
-			@media (max-width: 1024px) {
-				padding: 2rem;
-			}
-		}
-		> img {
-			position: absolute;
-			z-index: -1;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
+		background-image: url(./HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true);
+		background-size: cover;
 
 		h1 {
 			font-size: 8rem;
 			font-weight: 300;
 			line-height: 8rem;
-			margin: 0;
+			margin-top: 8rem;
+			margin-bottom: 4rem;
 			@media (max-width: 1024px) {
 				font-size: 4rem;
 				line-height: 4rem;
 			}
 		}
-		#heading {
-			padding-top: 18rem;
-			@media (max-width: 1024px) {
-				padding-top: 8rem;
-			}
-		}
-		/* No idea if bad practice but I'm setting a general id as footer for a single section, keep that in mind */
-		#footer {
+
+		.footer {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding: 8rem 0rem 4rem 0rem;
 			@media (max-width: 1024px) {
 				flex-direction: column;
-				padding: 4rem 0 4rem 0;
+				align-items: flex-start;
 			}
-		}
-		#subtextwrapper {
-			font-size: 1.4rem;
-			margin-bottom: 2rem;
-			@media (max-width: 1024px) {
-				font-size: 1.2rem;
+
+			> p {
+				font-size: 1.4rem;
+				@media (max-width: 1024px) {
+					margin-bottom: 4rem;
+					font-size: 1.2rem;
+				}
 			}
 		}
 	}
 
 	#explainer {
-		padding: 5rem 0 5rem 0;
 		font-weight: 300;
 		p {
 			max-width: 768px;
 		}
-		@media (max-width: 1024px) {
-			padding: 4rem 2rem;
-		}
-		@media (max-width: 1920px) {
-			padding: 2rem 5rem 5rem 2rem;
-		}
 	}
 
-	#roadmap {
-		padding: 5rem 0 5rem 0;
-		@media (max-width: 1024px) {
-			padding: 2rem;
-		}
-		@media (max-width: 1920px) {
-			padding: 5rem 2rem 5rem 2rem;
-		}
+	#roadmap > :global(.entry:last-child) {
+		margin-bottom: 0;
 	}
 
-	#about-us {
-		margin: 2rem 5rem 5rem 2rem;
-		p {
-			max-width: 768px;
-		}
-
-		@media (max-width: 1024px) {
-			margin: 2rem;
-		}
-	}
-	#team {
-		background: $light-gray;
-		#teambox {
-			padding: 2rem 0 2rem 0;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-			max-width: 1920px;
-			margin: 0 auto;
-		}
-		@media (min-width: 580px) {
-			padding: 5rem;
-		}
+	#team > div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
 	}
 
 	section.dark {
