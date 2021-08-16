@@ -155,9 +155,17 @@
 			color: white;
 			padding: 1rem;
 			text-decoration: none;
+			@media (max-width: 1024px) {
+				padding: 0rem;
+				margin-right: 1rem;
+			}
 		}
 		a:hover {
 			text-decoration: underline;
+		}
+
+		@media (max-width: 1024px) {
+			left: 0;
 		}
 	}
 
@@ -174,6 +182,8 @@
 
 		background-image: url(./HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true);
 		background-size: cover;
+		background-position: center top;
+		background-attachment: fixed;
 
 		h1 {
 			font-size: 8rem;
@@ -182,8 +192,10 @@
 			margin-top: 8rem;
 			margin-bottom: 4rem;
 			@media (max-width: 1024px) {
-				font-size: 4rem;
-				line-height: 4rem;
+				font-size: 2.3rem;
+				line-height: 2.3rem;
+				margin-top: 5rem;
+				margin-bottom: 1.5rem;
 			}
 		}
 
@@ -199,9 +211,10 @@
 
 			> p {
 				font-size: 1.4rem;
+				font-weight: 200;
 				@media (max-width: 1024px) {
-					margin-bottom: 4rem;
-					font-size: 1.2rem;
+					margin-bottom: 3.5rem;
+					font-size: 1rem;
 				}
 			}
 		}
