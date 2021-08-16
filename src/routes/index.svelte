@@ -255,11 +255,12 @@
 		background: $light-gray;
 		#teambox {
 			padding: 2rem 0 2rem 0;
-			margin: 0rem;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			flex-wrap: wrap;
+			max-width: 1920px;
+			margin: 0 auto;
 		}
 		@media (min-width: 580px) {
 			padding: 5rem;

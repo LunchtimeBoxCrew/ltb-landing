@@ -1,7 +1,6 @@
 <script lang="ts">
-	import ProfileImage from '../lib/images/people/ProfileImage.svelte';
-
 	import type { PeopleType } from '../lib/images/people/ProfileImage.svelte';
+	import ProfileImage from '../lib/images/people/ProfileImage.svelte';
 
 	export let name: PeopleType;
 
@@ -12,7 +11,7 @@
 	<ProfileImage {name} />
 	<div id="infobox" class="ltbgreen white">
 		<h2 class="xl">
-			{name}
+			{name},
 		</h2>
 		<p class="m">
 			{description}
@@ -41,15 +40,14 @@
 		object-fit: cover;
 
 		position: relative;
-		right: -4rem;
+		/* right: -4rem; */
 		mix-blend-mode: multiply;
 	}
 
-	#wrapper :global(div) {
-		height: 100%;
-	}
 	#infobox {
 		width: 66%;
+		margin: 25px;
+		border-radius: 13px;
 		padding: 1.3rem;
 	}
 	@media (min-width: 580px) {
@@ -57,11 +55,7 @@
 			height: 16rem;
 			width: 28rem;
 			margin: 1rem;
-			border: 1rem 0 0 1rem;
 			object-position: 50% 50%;
-		}
-		#infobox {
-			border-radius: 0rem 1rem 1rem 0rem;
 		}
 	}
 
