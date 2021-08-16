@@ -11,12 +11,22 @@
 </div>
 
 <style lang="scss">
+		@import '../styles/index.scss';
+
 	.content-raw {
 		& :global(p) {
 			margin: 1.3em 0;
 		}
 		& :global(h1) :global(h2) {
 			margin: 2em 0;
+		}
+		& :global(a) {
+			color: $green;
+			text-decoration: none;
+
+			&:hover {
+				color: $lightgreen;
+			}
 		}
 	}
 </style>
