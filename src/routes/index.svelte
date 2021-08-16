@@ -117,7 +117,11 @@
 		</div>
 	</section>
 
-	<ContactSection />
+	<section id="contact">
+		<div class="capwidth">
+			<ContactSection />
+		</div>
+	</section>
 </main>
 
 <style lang="scss">
@@ -219,6 +223,14 @@
 		flex-direction: row;
 		justify-content: space-around;
 		flex-wrap: wrap;
+	}
+
+	#contact {
+		background: $green;
+		> div {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 
 	section.dark {
