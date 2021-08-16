@@ -15,11 +15,20 @@
 	<slot />
 </div>
 
-<style>
+<style lang="scss">
+	@import '../styles/index.scss';
 	.markdown-wrapper > :global(:first-child) {
 		margin-top: 0px;
 	}
 	.markdown-wrapper > :global(:last-child) {
 		margin-bottom: 0px;
+	}
+
+	.markdown-wrapper > :global(p) {
+		margin: 1.3em 0;
+	}
+
+	.markdown-wrapper > :global(h1) :global(h2) {
+		margin: 2em 0;
 	}
 </style>
