@@ -40,20 +40,23 @@ import ContactSection from '$lib/layouts/ContactSection.svelte';
 	<!-- Explainer Section -->
 	<section id="explainer" class="dark">
 		<div class="capwidth">
-			<Content file="intro" />
+			<Content file="idea" />
 		</div>
 	</section>
 
 	<section id="roadmap" class="capwidth">
 		<h2>Roadmap - Where we've been, where we're going</h2>
-		<RoadMapEntry showDesc={true} name="Idee" date="2019" image="ideation">
-			<Content file="idea" />
-		</RoadMapEntry>
 		<RoadMapEntry showDesc={false} name="Entstehung" date="2019" image="ideation">
 			<Content file="formation" />
 		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Erster Prototyp" date="2019" image="prototype">
+			<Content file="firstprototype" />
+		</RoadMapEntry>
 		<RoadMapEntry showDesc={false} name="Project Make 1" date="2020" image="project">
-			<Content file="test" />
+			<Content file="projectmake1" />
+		</RoadMapEntry>
+		<RoadMapEntry showDesc={false} name="Project Make 2" date="2021" image="project">
+			<Content file="projectmake2" />
 		</RoadMapEntry>
 		<RoadMapEntry showDesc={false} name="Kickstart" date="2021" image="acceleration">
 			<Content file="testing" />
@@ -63,9 +66,10 @@ import ContactSection from '$lib/layouts/ContactSection.svelte';
 	<section id="about-us" class="capwidth">
 		<h2>Team</h2>
 		<p>
-			Wir sind ein interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
+			Wir sind eine Studierendengruppe an der Technischen Hochschule Köln im Rahmen des Studiengangs Code and Context und bestehen aus sieben Studierenden.
+			Als interdisziplinäres Team, mit Fähigkeiten im Bereich Hard- und Software, UI / UX
 			Design, Entrepeneurship und dem gemeinsamen Wunsch diese Fähigkeiten in einem sozialen Kontext
-			einzusetzen.
+			einzusetzen, stellen wir uns gemeinsam jeder Herausforderung.
 		</p>
 	</section>
 
