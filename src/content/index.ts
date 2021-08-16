@@ -5,3 +5,4 @@ export { default as firstprototype } from './firstprototype.md';
 export { default as projectmake1 } from './projectmake1.md';
 export { default as projectmake2 } from './projectmake2.md';
 export { default as projectcologne } from './projectcologne.md';
+export { default as kickstart} from './kickstart.md';
