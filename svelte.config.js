@@ -1,6 +1,8 @@
 import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
 import { imagetools } from 'vite-imagetools';
+import { plugin as mdPlugin } from 'vite-plugin-markdown';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -12,16 +14,14 @@ const config = {
 		target: '#svelte',
 		adapter: adapter(),
 		vite: {
-			plugins: [imagetools({ force: true })]
+			hmr: {
+				port: 3000
+			},
+			plugins: [imagetools({ force: true }), mdPlugin({ mode: 'html' })]
 		},
 		paths: {
 			assets: '/ltb-landing',
 			base: '/ltb-landing'
-		},
-		vite:{
-			hmr:{
-				port: 3000
-			}
 		}
 	}
 };

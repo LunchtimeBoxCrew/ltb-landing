@@ -3,14 +3,14 @@
 	export let name: string;
 	export let date: string;
 	export let description: string;
-    export let image:string;
-    export let showDesc:boolean;
+	export let image: string;
+	export let showDesc: boolean;
 
-    import * as StockImages from "./images/stock";
+	import * as StockImages from './images/stock';
 
 	function switchDesc() {
 		console.log('desc was ' + showDesc);
-        showDesc = !showDesc;
+		showDesc = !showDesc;
 	}
 </script>
 <div class='entry'>
@@ -86,10 +86,10 @@
         background-color: $light-gray;
     }
 
-    @media (max-width: 768px) {
-        .entry {
-            width: 100%;
-            margin-bottom: 1rem;
-        }
-    }
+	@media (max-width: 768px) {
+		.entry {
+			width: 100%;
+			margin-bottom: 1rem;
+		}
+	}
 </style>

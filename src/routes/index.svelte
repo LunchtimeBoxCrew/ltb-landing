@@ -1,18 +1,9 @@
 <script lang="ts">
+	import ContactSection from '$lib/layouts/ContactSection.svelte';
+	import Link from '$lib/Link.svelte';
 	import Person from '$lib/Person.svelte';
 	import RoadMapEntry from '$lib/RoadMapEntry.svelte';
 	import HeroHeader from './HeroHeader.jpg?w=300;400;1000&format=webp&flatten=true&srcset';
-	import Button from '$lib/Button.svelte';
-	import Icon from '$lib/Icon.svelte';
-	import { phone as phoneSrc } from '$lib/images/stock';
-	import { letter as letterSvg } from '$lib/images/icons';
-
-	function joinNumber() {
-		return 'tel:' + ['+49', '2261', '0000000000'].join('');
-	}
-	function joinMail() {
-		return 'mailto:' + ['hello', '@', 'lunchtimebox.de'].join('');
-	}
 </script>
 
 <header>
@@ -38,12 +29,9 @@
 						Wir geben Menschen ein einfaches Werkzeug gegen die soziale Isolation an die Hand.
 					</p>
 				</div>
-				<a href="#contact" class="button">
-					<div class="content">
-						<p>Kontaktiere uns</p>
-						<Icon name="letter" --fill="darkgray" />
-					</div>
-				</a>
+				<Link link="#contact" icon="letter" --min-width="160px">
+					<p>Kontaktiere uns</p>
+				</Link>
 			</div>
 		</div>
 	</section>
@@ -85,7 +73,7 @@
 			Unsere Vision möchten wir mithilfe der LunchtimeBox realisieren. Die Idee bei der LunchtimeBox ist, eine Essenstransportbox mit einem Bildschirm und Videokommunikationstechnik auszustatten. Unser Ziel dabei ist es, die Technik so einfach wie möglich zu gestalten, um den Nutzer:innen höheren Alters die Möglichkeit zu bieten mit Angehörigen oder anderen Nutzer:innen der Box während des Mittagessens zu kommunizieren. Damit möchten wir zwei Grundbedürfnisse zusammenführen. Zum einen die Nahrungsaufnahme und zum anderen die soziale Interaktion."
 		/>
 		<RoadMapEntry
-			showDesc={true}
+			showDesc={false}
 			name="Entstehung"
 			date="2019"
 			image="ideation"
@@ -124,38 +112,17 @@
 
 	<section id="team">
 		<div id="teambox">
-			<Person name="Majid" description="packt an, zieht durch" />
-			<Person name="Timo" description="der perfektionistische Informatiker" />
-			<Person name="Lara" description="unsere kreative Powereinheit" />
-			<Person name="Dario" description="unsere Emotionale Intelligenz" />
-			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" />
-			<Person name="Fabian" description="&quot;MacMakeThings&quot;" />
-			<Person name="Max" description="unser kreativer Programmierer" />
+			<Person name="majid" description="packt an, zieht durch" />
+			<Person name="timo" description="der perfektionistische Informatiker" />
+			<Person name="lara" description="unsere kreative Powereinheit" />
+			<Person name="dario" description="unsere Emotionale Intelligenz" />
+			<Person name="jonas" description="der immer noch zwei Schritte weiterdenkt" />
+			<Person name="fabian" description="&quot;MacMakeThings&quot;" />
+			<Person name="max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
-	<section id="contact">
-		<h1 style="margin-bottom: 2rem">Kontaktiere uns</h1>
-		<div id="infowrapper">
-			<div id="infos">
-				<p id="text" style="text-align:center; margin-top: 2rem">
-					Um unsere Idee erfolgreich in die Tat umsetzen zu können, benötigen wir Ihre
-					Unterstützung. Egal, ob mit <b>Testgeräten</b>, <b>Mentoring/Fachwissensaustausch</b> oder
-					<b>Testpersonen</b> - wir freuen uns über jede Art der Unterstützung.
-				</p>
 
-				<br />
-				<br />
-
-				<Button --margin="0.7rem 0" link={joinMail} style="dark" icon="letter">
-					Schick uns eine Mail
-				</Button>
-				<Button --margin="0.7rem 0" link={joinNumber} style="dark" icon="letter" click={false}>
-					Oder ruf uns einfach an
-				</Button>
-			</div>
-			<img srcset={phoneSrc} alt="An old phone" />
-		</div>
-	</section>
+	<ContactSection />
 </main>
 
 <style lang="scss">
@@ -179,12 +146,6 @@
 		}
 	}
 
-	p.text {
-		padding: 0;
-		margin: 0;
-		font-weight: 300;
-	}
-
 	header {
 		z-index: 2;
 		right: 10px;
@@ -202,52 +163,11 @@
 		}
 	}
 
-	a.button {
-		all: unset;
-		background-color: white;
-		border: none;
-		border-radius: 0.5rem;
-		padding: 1rem 1.2rem;
-		cursor: pointer;
-
-		&.dark {
-			background-color: rgb(24, 24, 24);
-			.content {
-				color: white;
-			}
-		}
-		@media (max-width: 1024px) {
-			width: 100%;
-		}
-		position: relative;
-		&::after {
-			position: absolute;
-			content: '"Klick"';
-			top: -2rem;
-			right: -1rem;
-			color: white;
-			font-size: 1rem;
-			transform: rotate(10deg);
-			opacity: 0.6;
-		}
-		.content {
-			color: darkgray;
-			font-size: 1rem;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			p {
-				margin-right: 1rem;
-			}
-		}
-	}
-
 	#intro {
 		position: relative;
 
 		> .capwidth {
-
+			padding: 5rem;
 			@media (max-width: 1024px) {
 				padding: 2rem;
 			}
@@ -282,7 +202,7 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			padding: 8rem 0 4rem 0;
+			padding: 8rem 0rem 4rem 0rem;
 			@media (max-width: 1024px) {
 				flex-direction: column;
 				padding: 4rem 0 4rem 0;
@@ -343,59 +263,6 @@
 		}
 		@media (min-width: 580px) {
 			padding: 5rem;
-		}
-	}
-
-	#contact {
-		margin: 15rem 0;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-
-		#infowrapper {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			background: $light-gray;
-		}
-		img {
-			width: 50%;
-		}
-		#infos {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-			width: 50%;
-		}
-		#text {
-			width: 50%;
-			text-align: left;
-		}
-		.button-content {
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: space-between;
-			p {
-				margin-right: 1rem;
-			}
-		}
-		h1 {
-			margin: 2rem;
-		}
-
-		@media (max-width: 1024px) {
-			#infowrapper {
-				flex-direction: column;
-			}
-			#infos {
-				width: 100%;
-			}
-
-			img {
-				width: 100%;
-			}
 		}
 	}
 
