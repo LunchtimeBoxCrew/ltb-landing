@@ -72,13 +72,13 @@
 
 	<section id="team">
 		<div class="capwidth">
-			<Person name="majid" description="packt an, zieht durch" />
-			<Person name="timo" description="der perfektionistische Informatiker" />
-			<Person name="lara" description="unsere kreative Powereinheit" />
-			<Person name="dario" description="unsere Emotionale Intelligenz" />
-			<Person name="jonas" description="der immer noch zwei Schritte weiterdenkt" />
-			<Person name="fabian" description="&quot;MacMakeThings&quot;" />
-			<Person name="max" description="unser kreativer Programmierer" />
+			<Person name="Majid" description="packt an, zieht durch" />
+			<Person name="Timo" description="der perfektionistische Informatiker" />
+			<Person name="Lara" description="unsere kreative Powereinheit" />
+			<Person name="Dario" description="unsere Emotionale Intelligenz" />
+			<Person name="Jonas" description="der immer noch zwei Schritte weiterdenkt" />
+			<Person name="Fabian" description="&quot;MacMakeThings&quot;" />
+			<Person name="Max" description="unser kreativer Programmierer" />
 		</div>
 	</section>
 
