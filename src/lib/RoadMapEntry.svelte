@@ -13,8 +13,8 @@
         showDesc = !showDesc;
 	}
 </script>
-<div class='entry' on:click={switchDesc}>
-    <div class='wrapper' class:opened={showDesc}>
+<div class='entry'>
+    <div class='wrapper' on:click={switchDesc} class:opened={showDesc}>
         <img srcset={StockImages[image]} alt='descriptive image of {name}' />
         <div class='header'>
             <h1 class='heading'>{name}</h1>
@@ -32,13 +32,13 @@
     @import '../styles/index.scss';
     .entry {
         border-radius: 1rem;
-        cursor: pointer;
         /* width: 50%; */
         max-width: 768px;
         background-color: #f8f8f8;
         margin-bottom: 4rem;
     }
     .wrapper {
+		cursor: pointer;
         position: relative;
         overflow: hidden;
         height: 10rem;
